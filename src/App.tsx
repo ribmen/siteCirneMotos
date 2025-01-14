@@ -1,19 +1,31 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
+import { BrowserRouter as Router } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';
-import theme from './styles/theme';
-import Header from './components/Header';
-import Body from './components/Body';
-import Footer from './components/Footer';
+import AppRoutes from './routes/AppRoutes';
+import Header from './components/header/Header';
+import Footer from './components/footer/Footer';
+import Layout from './components/Layout';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+
+library.add(fas, far, fab);
+
+
+
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Header />
-      <Body />
-      <Footer />
-    </ThemeProvider>
+    <Router>
+      <Layout>
+        <GlobalStyles />
+        <Header />
+        <AppRoutes />
+        <Footer />
+      </Layout>
+
+    </Router>
   );
 };
 
