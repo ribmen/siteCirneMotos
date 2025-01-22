@@ -8,7 +8,7 @@
 
 .supportingText {
   color: #e0e0e0;  /* Cor mais suave que o branco puro */
-  font-size: 1.2rem;  /* Aumenta um pouco o tamanho da fonte para melhor legibilidade */
+  font-size: 1.3rem;  /* Aumenta um pouco o tamanho da fonte para melhor legibilidade */
   line-height: 1.6;  /* Aumenta o espaçamento entre as linhas */
   width: 40rem;  /* Largura fixa */
   margin-top: 1rem;  /* Espaçamento superior entre o título e o texto */
@@ -25,7 +25,7 @@
 
 .instructionHighlight {
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 

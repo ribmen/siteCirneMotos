@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram } from '@fortawesome/free-brands-svg-icons';
-import cirne from "../../assets/logo_cirne-motos.png";
-import logoHonda from "../../assets/logo-honda.jpg";
-import whatsappIcon from "../../assets/whatsapp-icon.png";
+import cirne from "../../assets/logo/logo_cirne-motos.png";
+import logoHonda from "../../assets/logo/logo-honda.jpg";
+import whatsappIcon from "../../assets/icons/whatsapp-icon.png";
 
 
 const HeaderWrapper = styled.header`
@@ -169,12 +169,12 @@ const Header: React.FC = () => {
         </InfoGroup>
         <InfoGroup>
           <InfoSpan>Fale conosco:</InfoSpan>
-          <Button href="https://wa.me/" target="_blank">
+          <Button style={{color: "#000"}} href="https://wa.me/+5584981883488" target="_blank">
             <img src={whatsappIcon} alt="WhatsApp" />
             WhatsApp
           </Button>
           <InfoSpan>Siga-nos nas redes sociais:</InfoSpan>
-          <Button href="https://instagram.com/" target="_blank">
+          <Button href="https://www.instagram.com/cirnemotos/" target="_blank">
             <FontAwesomeIcon icon={faInstagram} size="1x" />
           </Button>
 
@@ -184,16 +184,15 @@ const Header: React.FC = () => {
       <LowerHeader>
         <Nav>
           <NavLink to="/">Início</NavLink>
-          <NavLink to="/fluxos">Fluxogramas de Processos</NavLink>
+          <NavLink to="/sobre">Sobre a Empresa</NavLink>
           <NavLink to="/conceitos">Conceitos Fundamentais</NavLink>
-          <NavLink to="/organograma">Organograma e DCO</NavLink>
+          <NavLink to="/organogramaDCO">Organograma e DCO</NavLink>
           <DropdownWrapper>
             <DropdownButton onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
               Mais <DropdownIcon isOpen={isDropdownOpen}>▼</DropdownIcon>
             </DropdownButton>
             <DropdownContent isOpen={isDropdownOpen}>
-              <DropdownItem to="/contato">Contato</DropdownItem>
-              <DropdownItem to="/sobrenos">Sobre a empresa</DropdownItem>
+              <DropdownItem to="/fluxos">Fluxogramas de Processos</DropdownItem>
               <DropdownItem to="/pops">POPs</DropdownItem>
               <DropdownItem to="/creditos">Créditos</DropdownItem>
             </DropdownContent>

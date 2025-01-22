@@ -1,32 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import bannerImage from '../assets/Banner Honda Motos.jpg';
-import bannerCirne from '../../../assets/cirnemotosbanner2.jpg'
+import bannerCirne from '../../../assets/banners/cirne-loja.jpg'
+import ContentArea2 from '../../utils/ContentArea2';
 
 const AboutWrapper = styled.div`
-  color: #333;
-  line-height: 1.6;
-`;
-
-const Banner = styled.div`
-  background: url(${bannerCirne}) no-repeat center;
-  background-size: cover;
-  height: 400px;
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  padding-left: 8rem;
-  text-align: left;
-  color: white;
-
-  h1 {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  }
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
 `;
 
 const Section = styled.section`
-  max-width: 1200px;
   margin: 2rem auto;
   padding: 2rem;
   background: #fff;
@@ -37,15 +22,22 @@ const Section = styled.section`
 const SectionTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  color: #ff0000;
-  border-left: 5px solid #ff0000;
+  color: #cc0000;
+  border-left: 5px solid #cc0000; //#FF0000
   padding-left: 1rem;
 `;
 
 const TextContent = styled.p`
-  font-size: 1rem;
   margin-bottom: 1rem;
-  color: #555;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.colors.neutral.dark}
+`;
+
+const Title = styled.h1`
+  color: #cc0000;
+  font-size: 2.5rem;
+  margin-bottom: 0;
 `;
 
 const ValuesList = styled.ul`
@@ -60,13 +52,13 @@ const ValuesList = styled.ul`
 
     &::before {
       content: '✓';
-      color: #ff0000;
+      color: #cc0000;
       font-weight: bold;
       margin-right: 0.5rem;
     }
 
     span {
-      font-size: 1rem;
+      font-size: 1.2rem;
       color: #333;
     }
   }
@@ -74,14 +66,22 @@ const ValuesList = styled.ul`
 
 const AboutBody: React.FC = () => {
   return (
+    <>
+    {/* Banner */}
+    <img
+        src={bannerCirne}
+        alt="Banner Cirne Motos"
+        style={{
+          width: '100%',
+          height: 'auto',
+          position: 'relative',
+        }}
+      />
+    
     <AboutWrapper>
-      {/* Banner */}
-      <Banner>
-        <h1>Sobre a Cirne Motos Honda</h1>
-      </Banner>
-
       {/* Introdução */}
-      <Section>
+      <ContentArea2>
+      <Title>Sobre a empresa</Title>
         <SectionTitle>Quem Somos</SectionTitle>
         <TextContent>
           A Cirne Motos Honda é uma concessionária dedicada a oferecer excelência em produtos e serviços, sempre
@@ -124,8 +124,9 @@ const AboutBody: React.FC = () => {
             <span>Reconhecimento e Mérito: Celebramos conquistas e valorizamos resultados.</span>
           </li>
         </ValuesList>
-      </Section>
+      </ContentArea2>
     </AboutWrapper>
+    </>
   );
 };
 

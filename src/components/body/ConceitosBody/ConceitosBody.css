@@ -4,3 +4,9 @@
   margin-bottom: 2rem;  /* Remove margens externas */
   text-align: left; /* Alinha o texto à esquerda */
 }
+
+.content {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;  /* Remove margens externas */
+  text-align: left; /* Alinha o texto à esquerda */
+}

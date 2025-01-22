@@ -1,11 +1,11 @@
 import "./body.css";
 import styled from 'styled-components';
 import ContentArea from '../../utils/ContentArea';
-import banner from '../../../assets/banner-cirne-motos.jpg';
+import banner from '../../../assets/banners/banner-cirne-motos.jpg';
 import salesman from '../../../assets/rapaz-competente-honda.jpg';
 
 const BodyWrapper = styled.main`
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 1rem auto; /* Centraliza horizontalmente */
   padding: 0;
 `;
@@ -18,6 +18,7 @@ const Button = styled.button`
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover, &:focus {
@@ -40,7 +41,7 @@ const TextColumn = styled.div`
   flex: 2;
   p {
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.neutral.dark};
   }
 `;
@@ -103,7 +104,7 @@ export const Body: React.FC = () => {
               </p>
             </TextColumn>
           </FlexContainer>
-          {/* Botão no final */}
+
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>
               Começar a acessar conteúdos

@@ -4,3 +4,16 @@
   margin-bottom: 2rem;  /* Remove margens externas */
   text-align: left; /* Alinha o texto à esquerda */
 }
+
+.sumarioTitle {
+  font-size: 2rem;
+}
+
+.sumarioFluxos {
+  text-align: left;
+}
+
+.table-of-contents {
+  border: #c3c3c3 solid 1px;
+  padding: 1rem;
+}

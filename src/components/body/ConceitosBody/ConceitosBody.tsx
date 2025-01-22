@@ -1,15 +1,79 @@
 import React from 'react';
+import styled from 'styled-components';
 import "../InicioBody/body.css";
 import "./ConceitosBody.css";
-import styled from 'styled-components';
 import ContentArea2 from '../../utils/ContentArea2'
 import banner from '../../../assets/honda-legacy2.jpg';
-import salesman from '../../../assets/rapaz-competente-honda.jpg';
+import soichiro from '../../../assets/sochiro-honda.png';
+import missaoValores from '../../../assets/missaovalores2.jpg';
+import ayrton from '../../../assets/soichiro-ayrton.jpg';
+import soichiroMoto from '../../../assets/soichiro-moto.jpg';
+import { SoichiroQuote } from '../../utils/SoichiroQuote';
 
 const BodyWrapper = styled.main`
-  max-width: 1200px;
-  margin: 1rem auto; /* Centraliza horizontalmente */
-  padding: 0;
+  max-width: 1100px;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  font-size: 1.2rem;
+  line-height: 1.8;
+`;
+
+const Title = styled.h1`
+  color: #cc0000;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  margin-top: 0;
+`;
+
+const Section = styled.section`
+  margin-bottom: 2rem;
+`;
+
+const Subtitle = styled.h2`
+  color: #444;
+  font-size: 1.8rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+`;
+
+const FlexContainer = styled.div`
+  display: flex;
+  align-items: flex-start; 
+  gap: 1rem; 
+  margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column; /* Empilha em telas menores */
+    align-items: center; 
+  }
+`;
+
+const LeftImage = styled.img`
+  flex-shrink: 0; /* Garante que a imagem não encolha */
+  width: 350px; 
+  height: auto; 
+  object-fit: contain;
+`;
+
+const TextContent = styled.div`
+  flex: 1; 
+  p, ul, li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+`;
+
+const Banner = styled.img`
+  width: 100%;
+  height: auto;
+  margin-bottom: 2rem;
 `;
 
 const Button = styled.button`
@@ -20,6 +84,7 @@ const Button = styled.button`
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover, &:focus {
@@ -28,108 +93,93 @@ const Button = styled.button`
   }
 `;
 
-const FlexContainer = styled.div`
-  display: flex;
-  gap: 2rem; 
-  align-items: center; 
-  @media (max-width: 768px) {
-    flex-direction: column; 
-    gap: 1rem; 
-  }
-`;
-
-const TextColumn = styled.div`
-  flex: 2;
-  p {
-    line-height: 1.6;
-    font-size: 1.1rem;
-    color: ${({ theme }) => theme.colors.neutral.dark};
-  }
-`;
-
-const ImageColumn = styled.div`
-  flex: 1;
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-`;
-
-export const ConceitosBody: React.FC = () => {
-
-  // Função para rolar a página para o topo
+const ConceitosBody: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-      <img
-        src={banner}
-        alt="Banner Conceitos Fundamentais"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
-      />
+    <div>
+      <Banner src={banner} alt="Banner Conceitos Fundamentais" />
       <BodyWrapper>
-        {/* Primeira ContentArea com texto e imagem lado a lado */}
         <ContentArea2>
-            <h1 className='conceitosTitle'>Conceitos Fundamentais Cirne Motos Honda</h1>
-            <p>Para garantir o sucesso contínuo e a excelência no atendimento ao cliente, a Cirne Motos Honda adota conceitos fundamentais que guiam nossas práticas diárias e orientam o desempenho da equipe. Estes princípios são essenciais para a busca incessante pela qualidade e a satisfação do cliente, fundamentais para o crescimento da empresa.</p>
-          <FlexContainer>
-            <ImageColumn>
-              <img src={salesman} alt="Vendedor" />
-            </ImageColumn>
-            <TextColumn>
-              <p className='segundoTexto'>
-              Para garantir o sucesso contínuo e a excelência no atendimento ao cliente, a Cirne Motos Honda adota conceitos fundamentais que guiam nossas práticas diárias e orientam o desempenho da equipe. Estes princípios são essenciais para a busca incessante pela qualidade e a satisfação do cliente, fundamentais para o crescimento da empresa.
-              <br/><br/>
-              (3B+F-O)K
-              <br/><br/>
-              O conceito (3B+F-O)K é uma abordagem estratégica para maximizar a eficácia na venda e no atendimento, com foco em causar um impacto positivo no cliente:
-              <br/><br/>
-              3B: A primeira parte do conceito se refere a causar o “brilho no olho” do cliente em três aspectos essenciais:
-              <br/><br/>
-              Bom Atendimento: Proporcionar um atendimento excepcional, que faça o cliente se sentir valorizado e bem atendido.
-              <br/><br/>
-              Bom Produto: Oferecer produtos de qualidade que atendam às necessidades e expectativas do cliente.
-              <br/><br/>
-              Boa Proposta: Apresentar propostas claras e vantajosas, que realmente se destaquem para o cliente, agregando valor à sua experiência.
-              <br/><br/>
-              F (Mexer na Ferida): Identificar e abordar as necessidades ou problemas do cliente, tocando nas questões sensíveis para gerar uma solução eficaz e atrativa.
-              <br/><br/>
-              O (Objeções): Reduzir as objeções do cliente ao máximo, garantindo que ele veja valor na oferta e entenda que sua escolha é a melhor opção.
-              <br/><br/>
-              K (Nocaute): Fechar a venda com determinação, demonstrando confiança e foco. Agir de forma decisiva, "nocautear" a resistência do cliente e garantir que ele faça a compra com a certeza de que tomou a melhor decisão.
-              <br/><br/>
-              CHA (Conhecimentos, Habilidades e Atitudes)
-              <br/><br/>
-              O conceito CHA reflete a importância do desenvolvimento contínuo dos colaboradores, que são a base do sucesso da empresa. Ele é fundamental para garantir que cada membro da equipe tenha as ferramentas necessárias para executar suas funções com excelência:
-              <br/><br/>
-              Conhecimentos: O "saber", ou seja, o aprendizado teórico e técnico necessário para realizar as atividades com competência e compreensão profunda do que se oferece.
-              <br/><br/>
-              Habilidades: O "saber fazer", que envolve a aplicação prática dos conhecimentos adquiridos e a capacidade de realizar tarefas com eficiência e qualidade.
-              <br/><br/>
-              Atitudes: O "querer fazer", que envolve a motivação, o compromisso e a postura proativa para buscar resultados e superar desafios com dedicação.
-              <br/><br/>
-              Esses conceitos são pilares para otimizar nossas operações, melhorar o atendimento ao cliente e garantir que a Cirne Motos Honda continue a crescer com solidez e inovação.
 
- 
-                <br/><br/>
-              
+        <Title>Conceitos Fundamentais Cirne Motos Honda</Title>
+
+        <Section>
+          <Image style={{width: '60%', height: 'auto', marginLeft: '12rem'}} src={missaoValores} alt="Missão e Valores da Cirne Motos Honda" />
+          <p>
+            Para garantir o <strong>sucesso contínuo</strong> e a <strong>excelência</strong> no atendimento ao cliente, 
+            a Cirne Motos Honda adota conceitos fundamentais que guiam nossas práticas diárias e orientam o desempenho da equipe. Estes princípios são essenciais para a busca incessante pela qualidade e a satisfação do cliente, fundamentais para o crescimento da empresa.
+          </p>
+        </Section>
+
+        <Section>
+          <h1>(3B+F-O)K</h1>
+          <FlexContainer>
+            <TextContent>
+              <p>O conceito <strong>(3B+F-O)K</strong> é uma abordagem estratégica para maximizar a eficácia na venda e no atendimento, com foco em causar um impacto positivo no cliente:
               </p>
-            </TextColumn>
+              <ul>
+                <li><strong>3B: </strong>A primeira parte do conceito se refere a causar o “brilho no olho” do cliente em três aspectos essenciais:
+                </li>
+                  <ul>
+                    <li><strong>Bom Atendimento: </strong> Proporcionar um atendimento excepcional, que faça o cliente se sentir valorizado e bem atendido.
+                    </li>
+                    <li><strong>Bom Produto: </strong> Oferecer produtos de qualidade que atendam às necessidades e expectativas do cliente.
+                    </li>
+                    <li><strong>Boa Proposta: </strong> Apresentar propostas claras e vantajosas, que realmente se destaquem para o cliente, agregando valor à sua experiência.
+                    </li>
+                  </ul>
+                <li><strong>F (Mexer na Ferida): </strong> Identificar e abordar as necessidades ou problemas do cliente, tocando nas questões sensíveis para gerar uma solução eficaz e atrativa.
+                </li>
+                <li><strong>O (Objeções): </strong> Reduzir as objeções do cliente ao máximo, garantindo que ele veja valor na oferta e entenda que sua escolha é a melhor opção.
+                </li>
+                <li><strong>K (Nocaute): </strong> Fechar a venda com determinação, demonstrando confiança e foco. Agir de forma decisiva, "nocautear" a resistência do cliente e garantir que ele faça a compra com a certeza de que tomou a melhor decisão.</li>
+              </ul>
+            </TextContent>
+            <LeftImage src={soichiro} alt="Soichiro Honda" />
           </FlexContainer>
-          {/* Botão no final */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+        </Section>
+
+        <SoichiroQuote/>
+
+        <Section>
+          <h1>CHA: Conhecimentos, Habilidades e Atitudes</h1>
+          <FlexContainer>
+            <TextContent>
+              <p>O conceito CHA reflete a importância do desenvolvimento contínuo dos colaboradores, que são a base do sucesso da empresa. Ele é fundamental para garantir que cada membro da equipe tenha as ferramentas necessárias para executar suas funções com excelência:
+              </p>
+              <ul>
+                <li><strong>Conhecimentos: </strong> O "saber", ou seja, o aprendizado teórico e técnico necessário para realizar as atividades com competência e compreensão profunda do que se oferece.
+                </li>
+                <li><strong>Habilidades: </strong> O "saber fazer", que envolve a aplicação prática dos conhecimentos adquiridos e a capacidade de realizar tarefas com eficiência e qualidade.
+                </li>
+                <li><strong>Atitudes: </strong> O "querer fazer", que envolve a motivação, o compromisso e a postura proativa para buscar resultados e superar desafios com dedicação.
+                </li>
+              </ul>
+            </TextContent>
+            <LeftImage src={ayrton} alt="Soichiro Honda e Ayrton Senna" />
+          </FlexContainer>
+        </Section>
+
+        <Section style={{backgroundColor: '#e6e6e6b9', padding: '3rem'}}>
+          <Image style={{marginLeft: '10rem'}} src={soichiroMoto} alt="Soichiro Honda e sua moto" />
+          <p>
+          Esses conceitos são pilares para otimizar nossas operações, melhorar o atendimento ao cliente e garantir que a Cirne Motos Honda continue a crescer com solidez e inovação.
+          </p>
+        </Section>
+
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>
-              Começar a acessar conteúdos
+              Voltar ao topo
             </Button>
           </div>
         </ContentArea2>
+
       </BodyWrapper>
     </div>
   );
 };
+
+export default ConceitosBody;

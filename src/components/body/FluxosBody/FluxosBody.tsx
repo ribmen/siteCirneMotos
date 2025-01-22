@@ -3,12 +3,20 @@ import "../InicioBody/body.css";
 import "./FluxosBody.css";
 import styled from 'styled-components';
 import ContentArea2 from '../../utils/ContentArea2'
-import banner from '../../../assets/banner-fluxos.jpg';
-import salesman from '../../../assets/rapaz-competente-honda.jpg';
+import banner from '../../../assets/banners/banner-fluxos.jpg';
+import planejamento from '../../../assets/planejamento.jpg';
+
+//FLUXOGRAMAS
+import emplacamento1 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-1.png'
+import emplacamento2 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-2.png'
+import faturamento from '../../../assets/fluxogramas/Fluxograma-Faturamento.png';
+import venda from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-1.png'
+import apresentacao from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-2.png'
+import perseguicao from '../../../assets/fluxogramas/Fluxo-Comercial-Perseguição.png'
 
 const BodyWrapper = styled.main`
-  max-width: 1200px;
-  margin: 1rem auto; /* Centraliza horizontalmente */
+  max-width: 1100px;
+  margin: 1rem auto;
   padding: 0;
 `;
 
@@ -38,11 +46,18 @@ const FlexContainer = styled.div`
   }
 `;
 
+const SumarioTopics = styled.ul`
+li {
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.colors.neutral.dark};
+}
+`
+
 const TextColumn = styled.div`
   flex: 2;
   p {
     line-height: 1.6;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.neutral.dark};
   }
 `;
@@ -57,7 +72,6 @@ const ImageColumn = styled.div`
 
 export const FluxosBody: React.FC = () => {
 
-  // Função para rolar a página para o topo
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -79,24 +93,41 @@ export const FluxosBody: React.FC = () => {
             <h1 className='fluxosTitle'>Fluxogramas de processos</h1>
           <FlexContainer>
             <ImageColumn>
-              <img src={salesman} alt="Vendedor" />
+              <img src={planejamento} alt="Planejamento" />
             </ImageColumn>
             <TextColumn>
               <p className='segundoTexto'>
-              Aqui, você encontrará orientações claras para desempenhar suas funções com mais facilidade e agilidade, promovendo um ambiente de trabalho mais integrado e colaborativo. O foco é dar suporte aos colaboradores, garantindo que todos tenham acesso às informações e diretrizes necessárias para executar suas atividades de forma produtiva. Com este material, buscamos otimizar a organização e a comunicação, simplificando rotinas e contribuindo para a excelência nas operações da empresa.
- 
-                <br/><br/>
-                <span className='instructionHighlight'>Use este documento como referência prática no dia a dia e para alinhar sua atuação às melhores práticas do setor.</span>
+              Os Fluxogramas de Processos são representações visuais que mapeiam e descrevem cada etapa das atividades dentro da empresa. Eles ajudam a entender o fluxo de trabalho, destacando responsabilidades e interações entre as etapas, o que facilita a identificação de melhorias e otimizações.
+              <br/><br/>
+              Esses fluxogramas asseguram a padronização dos processos, garantindo que as equipes sigam os mesmos procedimentos e alcancem resultados consistentes, promovendo a eficiência e a melhoria contínua na <span className='instructionHighlight'>Cirne Motos Honda</span>.                
               </p>
             </TextColumn>
+          
           </FlexContainer>
-          {/* Botão no final */}
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
-            <Button onClick={scrollToTop}>
-              Começar a acessar conteúdos
-            </Button>
-          </div>
+          <nav className='table-of-contents'>
+            <h1 className='sumarioTitle'>Sumário</h1>
+            <SumarioTopics>
+              <li><a href="#section1">Emplacamento e Seminovos</a></li>
+              <li><a href="#section2">Faturamento</a></li>
+              <li><a href="#section3">Processo de venda</a></li>
+              <li><a href="#section4">Processo de apresentação da moto</a></li>
+              <li><a href="#section5">Perseguição</a></li>
+            </SumarioTopics>
+          </nav>
         </ContentArea2>
+
+        <h1>Emplacamento e Seminovos</h1>
+        <img style={{maxWidth: '70%', height: 'auto'}} src={emplacamento1} />
+        <h1>Venda de seminovos</h1>
+        <img style={{maxWidth: '110%', height: 'auto'}} src={emplacamento2} /> 
+        <h1>Faturamento</h1>
+        <img style={{maxWidth: '100%', height: 'auto'}} src={faturamento} />
+        <h1>Processo de venda</h1>
+        <img style={{maxWidth: '100%', height: 'auto'}} src={venda} />
+        <h1>Processo de apresentação da moto</h1>
+        <img style={{maxWidth: '100%', height: 'auto'}} src={apresentacao} />
+        <h1>Perseguição</h1>
+        <img style={{maxWidth: '100%', height: 'auto'}} src={perseguicao} />
       </BodyWrapper>
     </div>
   );
