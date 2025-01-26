@@ -7,27 +7,12 @@ import banner from '../../../assets/banners/fluxogramas.jpg';
 import planejamento from '../../../assets/planejamento.jpg';
 import {data} from "./data";
 import { Dropdown } from '../../utils/Dropdown';
+import { Button } from '../ConceitosBody/ConceitosBody';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
   margin: 1rem auto;
   padding: 0;
-`;
-
-const Button = styled.button`
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.primary};
-  border: 2px solid ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.spacing.small} ${({ theme }) => theme.spacing.medium};
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover, &:focus {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.neutral.light};
-  }
 `;
 
 const FlexContainer = styled.div`
@@ -242,6 +227,11 @@ export const FluxosBody: React.FC = () => {
               </>
             ))}
           </div>
+          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+                      <Button onClick={scrollToTop}>
+                        Voltar ao topo
+                      </Button>
+                    </div>
 </BodyWrapper>
     </div>
   );

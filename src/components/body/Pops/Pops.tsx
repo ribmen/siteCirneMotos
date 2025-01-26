@@ -4,6 +4,9 @@ import banner from '../../../assets/banners/pops.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
 import pensamento from '../../../assets/organogramadco.jpg';
 import "../InicioBody/body.css";
+import { Button } from '../ConceitosBody/ConceitosBody';
+import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+import { Link } from 'react-router-dom';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -18,6 +21,36 @@ const Title = styled.h1`
   font-size: 2.5rem;
   margin-bottom: 0;
   margin-top: 0;
+`;
+
+const NavLink = styled(Link)`
+  color: ${({ theme }) => theme.colors.neutral.dark};
+  position: relative; 
+  text-decoration: none; 
+  
+  &:hover,
+  &:focus {
+    color: ${({ theme }) => theme.colors.primary};
+  }
+
+  &::after {
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 2px;
+    background-color: ${({ theme }) => theme.colors.primary};  
+    transform: scaleX(0); 
+    transform-origin: bottom right;
+    transition: transform 0.2s ease;  
+  }
+
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);  /* Expande a linha para a largura total quando em hover ou focus */
+    transform-origin: bottom left;  /* Garante que a animação cresça da esquerda */
+  }
 `;
 
 const Section = styled.section`
@@ -71,23 +104,6 @@ const Banner = styled.img`
   margin-bottom: 2rem;
 `;
 
-const Button = styled.button`
-  background-color: transparent;
-  color: ${({ theme }) => theme.colors.primary};
-  border: 2px solid ${({ theme }) => theme.colors.primary};
-  padding: ${({ theme }) => theme.spacing.small} ${({ theme }) => theme.spacing.medium};
-  border-radius: 25px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 1.2rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
-
-  &:hover, &:focus {
-    background-color: ${({ theme }) => theme.colors.primary};
-    color: ${({ theme }) => theme.colors.neutral.light};
-  }
-`;
-
 export const Pops: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -102,7 +118,7 @@ export const Pops: React.FC = () => {
         <Title>POPS (Procedimentos Operacionais Padrão)</Title>
 
         <Section>
-          <Subtitle>O que é um POP?</Subtitle>
+          <SectionTitle>O que é um POP?</SectionTitle>
           <p>
           Os <strong>Procedimentos Operacionais Padrão (POPs)</strong> são tutoriais detalhados e passo a passo que orientam a execução de atividades e processos nos sistemas utilizados pela empresa, como o P21, Cloud, IHS, entre outros. Eles garantem que todos os colaboradores sigam as mesmas práticas, assegurando consistência, eficiência e a redução de erros nas operações.
           </p>
@@ -116,6 +132,16 @@ export const Pops: React.FC = () => {
               </p>
             </TextContent>
           </FlexContainer>
+        </Section>
+        <Section>
+          <SectionTitle>Acesso aos conteúdos</SectionTitle>
+          <TextContent>
+            <p>Acesse, clicando nos LINKS a seguir, os respectivos Procedimentos Operacionais Padrão para os setores comercial e administrativo:</p>
+            <ul>
+              <li><NavLink to='/popscomercial'><strong>POPs COMERCIAL</strong></NavLink></li>
+              <li><NavLink to='/popsadministrativo'><strong>POPs ADMINISTRATIVO</strong></NavLink></li>
+            </ul>
+          </TextContent>
         </Section>
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>

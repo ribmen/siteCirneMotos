@@ -35,9 +35,7 @@ const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
       const rect = contentRef.current.getBoundingClientRect();
       if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
         setisvisible(true);
-      } else {
-        setisvisible(false);
-      }
+      } 
     }
   };
 

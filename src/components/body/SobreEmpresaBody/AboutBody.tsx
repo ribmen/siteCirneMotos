@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import bannerCirne from '../../../assets/banners/cirne-loja.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
+import moto from '../../../assets/moto-honda.png';
+import cbr1000 from '../../../assets/cbr1000.png';
+import { Button } from '../ConceitosBody/ConceitosBody';
 
 const AboutWrapper = styled.div`
   max-width: 1100px;
@@ -19,7 +22,7 @@ const Section = styled.section`
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
 
-const SectionTitle = styled.h2`
+export const SectionTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
   color: #cc0000;
@@ -65,6 +68,9 @@ const ValuesList = styled.ul`
 `;
 
 const AboutBody: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
   return (
     <>
     {/* Banner */}
@@ -124,6 +130,15 @@ const AboutBody: React.FC = () => {
             <span>Reconhecimento e Mérito: Celebramos conquistas e valorizamos resultados.</span>
           </li>
         </ValuesList>
+        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
+          <img src={moto} style={{width: '300px', height: 'auto', marginRight: '1rem'}}></img>
+          <img src={cbr1000} style={{width: '320px', height: '200px', bottom: '0', marginLeft: '1rem'}}></img>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+            <Button onClick={scrollToTop}>
+              Voltar ao topo
+            </Button>
+          </div>
       </ContentArea2>
     </AboutWrapper>
     </>

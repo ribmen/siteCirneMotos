@@ -2,6 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import bannerCirne from '../../../assets/banners/cirne-loja.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
+import handshake from '../../../assets/handshake.jpg';
+import motivacional from '../../../assets/videos/the-real-slim-video.mp4';
 
 const AboutWrapper = styled.div`
   max-width: 1100px;
@@ -9,14 +11,6 @@ const AboutWrapper = styled.div`
   padding: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.8;
-`;
-
-const Section = styled.section`
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 `;
 
 const SectionTitle = styled.h2`
@@ -35,9 +29,13 @@ const TextContent = styled.p`
 `;
 
 const Title = styled.h1`
-  color: #cc0000;
-  font-size: 2.5rem;
+  color: #ff0000;
+  font-size: 3rem;
   margin-bottom: 0;
+  position: absolute;
+  background-color: 'rgba(0, 0, 0, 0.5)';
+  top: 13rem;
+  left: 14rem;
 `;
 
 const ValuesList = styled.ul`
@@ -67,21 +65,26 @@ const ValuesList = styled.ul`
 export const CreditosBody: React.FC = () => {
   return (
     <>
-    {/* Banner */}
-    <img
-        src={bannerCirne}
-        alt="Banner Cirne Motos"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
-      />
+    <div style={{position: 'relative'}}>
+    <video
+    src={motivacional}
+    controls
+    autoPlay
+    loop
+    muted
+    playsInline
+    style={{
+      width: '100%',
+      height: 'auto',
+      position: 'relative',
+    }}
+    />
+    <Title>Créditos</Title>
+    </div>
     
     <AboutWrapper>
       {/* Introdução */}
       <ContentArea2>
-      <Title>Créditos</Title>
         <SectionTitle>Desenvolvimento do site</SectionTitle>
         <TextContent>
         Este site foi idealizado e desenvolvido pela <strong>Teixeira-Freire</strong>, representada por <strong>Arkanjo Teixeira</strong> e <strong>Davi Freire</strong>, como parte do projeto de consultoria realizado para a Honda Cirne Motos.
@@ -92,8 +95,13 @@ export const CreditosBody: React.FC = () => {
         </SectionTitle>
         <TextContent>
         Queremos expressar nossa gratidão a todos os colaboradores da <strong>Honda Cirne Motos</strong>. Vocês nos receberam com tanta atenção e respeito que transformaram essa experiência em um aprendizado valioso. A parceria e o cuidado de cada um nos motivaram a buscar o melhor para este projeto.
+
         <br/><br/>
-        Também reconhecemos o apoio técnico dos amigos Victor Menezes e Rafael Alfredo, que contribuíram para a entrega do site e do manual físico, respectivamente, com a qualidade esperada.
+        <div style={{display: "flex", justifyContent: 'center'}}>
+        <img src={handshake} style={{width: '400px', height: 'auto'}} />
+        </div>
+        <br/><br/>
+        Também reconhecemos o apoio técnico dos amigos <strong>Victor Menezes</strong> e <strong>Rafael Alfredo</strong>, que contribuíram para a entrega do site e do manual físico, respectivamente, com a qualidade esperada.
 
         </TextContent>
       

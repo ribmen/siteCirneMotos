@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ContentArea from '../../utils/ContentArea';
 import banner from '../../../assets/banners/banner-cirne-motos.jpg';
 import salesman from '../../../assets/rapaz-competente-honda.jpg';
+import { SoichiroQuote } from '../../utils/SoichiroQuote';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -104,13 +105,17 @@ export const Body: React.FC = () => {
               </p>
             </TextColumn>
           </FlexContainer>
-
+        </ContentArea>
+        <ContentArea>
+          <SoichiroQuote/>
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>
               Começar a acessar conteúdos
             </Button>
           </div>
         </ContentArea>
+         
+
       </BodyWrapper>
     </div>
   );

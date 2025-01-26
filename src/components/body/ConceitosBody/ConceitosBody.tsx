@@ -4,11 +4,12 @@ import "../InicioBody/body.css";
 import "./ConceitosBody.css";
 import ContentArea2 from '../../utils/ContentArea2'
 import banner from '../../../assets/honda-legacy2.jpg';
-import soichiro from '../../../assets/sochiro-honda.png';
+import salesman from '../../../assets/salesman.jpg';
 import missaoValores from '../../../assets/missaovalores2.jpg';
-import ayrton from '../../../assets/soichiro-ayrton.jpg';
+import mulher from '../../../assets/mulher-honda.jpg';
 import soichiroMoto from '../../../assets/soichiro-moto.jpg';
-import { SoichiroQuote } from '../../utils/SoichiroQuote';
+import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -76,7 +77,7 @@ const Banner = styled.img`
   margin-bottom: 2rem;
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   background-color: transparent;
   color: ${({ theme }) => theme.colors.primary};
   border: 2px solid ${({ theme }) => theme.colors.primary};
@@ -115,7 +116,7 @@ const ConceitosBody: React.FC = () => {
         </Section>
 
         <Section>
-          <h1>(3B+F-O)K</h1>
+          <SectionTitle>(3B+F-O)K</SectionTitle>
           <FlexContainer>
             <TextContent>
               <p>O conceito <strong>(3B+F-O)K</strong> é uma abordagem estratégica para maximizar a eficácia na venda e no atendimento, com foco em causar um impacto positivo no cliente:
@@ -138,14 +139,12 @@ const ConceitosBody: React.FC = () => {
                 <li><strong>K (Nocaute): </strong> Fechar a venda com determinação, demonstrando confiança e foco. Agir de forma decisiva, "nocautear" a resistência do cliente e garantir que ele faça a compra com a certeza de que tomou a melhor decisão.</li>
               </ul>
             </TextContent>
-            <LeftImage src={soichiro} alt="Soichiro Honda" />
+            <LeftImage src={salesman} alt="Vendedor" />
           </FlexContainer>
         </Section>
 
-        <SoichiroQuote/>
-
         <Section>
-          <h1>CHA: Conhecimentos, Habilidades e Atitudes</h1>
+          <SectionTitle>CHA: Conhecimentos, Habilidades e Atitudes</SectionTitle>
           <FlexContainer>
             <TextContent>
               <p>O conceito CHA reflete a importância do desenvolvimento contínuo dos colaboradores, que são a base do sucesso da empresa. Ele é fundamental para garantir que cada membro da equipe tenha as ferramentas necessárias para executar suas funções com excelência:
@@ -159,16 +158,17 @@ const ConceitosBody: React.FC = () => {
                 </li>
               </ul>
             </TextContent>
-            <LeftImage src={ayrton} alt="Soichiro Honda e Ayrton Senna" />
+            <LeftImage src={mulher} alt="Mulher com moto" />
           </FlexContainer>
         </Section>
 
-        <Section style={{backgroundColor: '#e6e6e6b9', padding: '3rem'}}>
+        {/* BANNER SOICHIRO */}
+        {/* <Section style={{backgroundColor: '#e6e6e6b9', padding: '3rem'}}>
           <Image style={{marginLeft: '10rem'}} src={soichiroMoto} alt="Soichiro Honda e sua moto" />
           <p>
           Esses conceitos são pilares para otimizar nossas operações, melhorar o atendimento ao cliente e garantir que a Cirne Motos Honda continue a crescer com solidez e inovação.
           </p>
-        </Section>
+        </Section> */}
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>
