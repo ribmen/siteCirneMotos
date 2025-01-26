@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import banner from '../../../assets/banners/cirne-loja.jpg'
+import banner from '../../../assets/banners/organograma.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
 import gerente from '../../../assets/gerente-produto.jpg';
 import "../InicioBody/body.css";

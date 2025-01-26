@@ -1,18 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "../InicioBody/body.css";
 import "./FluxosBody.css";
 import styled from 'styled-components';
 import ContentArea2 from '../../utils/ContentArea2'
-import banner from '../../../assets/banners/banner-fluxos.jpg';
+import banner from '../../../assets/banners/fluxogramas.jpg';
 import planejamento from '../../../assets/planejamento.jpg';
-
-//FLUXOGRAMAS
-import emplacamento1 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-1.png'
-import emplacamento2 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-2.png'
-import faturamento from '../../../assets/fluxogramas/Fluxograma-Faturamento.png';
-import venda from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-1.png'
-import apresentacao from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-2.png'
-import perseguicao from '../../../assets/fluxogramas/Fluxo-Comercial-Perseguição.png'
+import {data} from "./data";
+import { Dropdown } from '../../utils/Dropdown';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -70,10 +64,119 @@ const ImageColumn = styled.div`
   }
 `;
 
-export const FluxosBody: React.FC = () => {
+// Implementação da expansão da imagem
+const ExpandButton = styled.button`
+  bottom: 1rem;
+  right: 1rem;
+  background: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 8px 4px 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+//   transition: background-color 0.3s ease, transform 0.3s ease-in-out;
 
+  &:hover {
+    background: #910000;
+    transform: scale(1.1);
+  }
+`;
+
+// Overlay do popup
+const PopupOverlay = styled.div<{ show: boolean }>`
+  display: ${({ show }) => (show ? "flex" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.9);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+`;
+
+
+const PopupImage = styled.img`
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  animation: zoomIn 0.3s ease;
+
+  @keyframes zoomIn {
+    from {
+      transform: scale(0.8);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+`;
+
+// Botão de fechar
+const CloseButton = styled.button`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: #ff0000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: #cc0000;
+  }
+`;
+
+const ImageWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  max-width: 70%;
+  margin: 2rem auto;
+`;
+
+export const FluxosBody: React.FC = () => {
+  
+
+  
+/*   const [isPopupVisible, setIsPopupVisible] = useState(false);
+  const [popupImageId, setPopupImageId] = useState(null);
+  const handleOpenPopup = (images.id) => setPopupImageId(images.id);
+  const handleClosePopup = (images.id) => setPopupImageId(null);
+ */
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+  const [popupImageId, setPopupImageId] = useState<number | null>(null);
+
+  const handleOpenPopup = (id: number) => {
+    setPopupImageId(id);
+  };
+
+  const handleClosePopup = () => {
+    setPopupImageId(null);
   };
 
   return (
@@ -91,44 +194,55 @@ export const FluxosBody: React.FC = () => {
         {/* Primeira ContentArea com texto e imagem lado a lado */}
         <ContentArea2>
             <h1 className='fluxosTitle'>Fluxogramas de processos</h1>
+
           <FlexContainer>
             <ImageColumn>
-              <img src={planejamento} alt="Planejamento" />
-            </ImageColumn>
+                <img src={planejamento} alt="Planejamento" />
+            </ImageColumn>             
             <TextColumn>
               <p className='segundoTexto'>
               Os Fluxogramas de Processos são representações visuais que mapeiam e descrevem cada etapa das atividades dentro da empresa. Eles ajudam a entender o fluxo de trabalho, destacando responsabilidades e interações entre as etapas, o que facilita a identificação de melhorias e otimizações.
               <br/><br/>
               Esses fluxogramas asseguram a padronização dos processos, garantindo que as equipes sigam os mesmos procedimentos e alcancem resultados consistentes, promovendo a eficiência e a melhoria contínua na <span className='instructionHighlight'>Cirne Motos Honda</span>.                
               </p>
-            </TextColumn>
-          
+            </TextColumn>         
           </FlexContainer>
           <nav className='table-of-contents'>
             <h1 className='sumarioTitle'>Sumário</h1>
             <SumarioTopics>
-              <li><a href="#section1">Emplacamento e Seminovos</a></li>
-              <li><a href="#section2">Faturamento</a></li>
-              <li><a href="#section3">Processo de venda</a></li>
-              <li><a href="#section4">Processo de apresentação da moto</a></li>
-              <li><a href="#section5">Perseguição</a></li>
+              <li><a href="#section1">Processo de Faturamento</a></li>
+              <li><a href="#section2">Entrega da moto</a></li>
+              <li><a href="#section3">Emplacamento</a></li>
+              <li><a href="#section4">Processo de vendas</a></li>
+              <li><a href="#section5">Apresentação da moto</a></li>
+              <li><a href="#section5">Processo de perseguição do cliente</a></li>
+              <li><a href="#section5">Processo de motos e usado (seminovos)</a></li>
             </SumarioTopics>
           </nav>
         </ContentArea2>
 
-        <h1>Emplacamento e Seminovos</h1>
-        <img style={{maxWidth: '70%', height: 'auto'}} src={emplacamento1} />
-        <h1>Venda de seminovos</h1>
-        <img style={{maxWidth: '110%', height: 'auto'}} src={emplacamento2} /> 
-        <h1>Faturamento</h1>
-        <img style={{maxWidth: '100%', height: 'auto'}} src={faturamento} />
-        <h1>Processo de venda</h1>
-        <img style={{maxWidth: '100%', height: 'auto'}} src={venda} />
-        <h1>Processo de apresentação da moto</h1>
-        <img style={{maxWidth: '100%', height: 'auto'}} src={apresentacao} />
-        <h1>Perseguição</h1>
-        <img style={{maxWidth: '100%', height: 'auto'}} src={perseguicao} />
-      </BodyWrapper>
+ {/*        <ContentArea2> */}
+          <div>
+            {data.map((data) => (
+              <>
+                <h1>{data.title}</h1>
+                <ImageWrapper key={data.id}>
+                  <img style={{maxWidth: '100%', height: 'auto'}} src={data.src} alt={data.alt} />
+                  <PopupOverlay show={popupImageId === data.id}>
+                    <PopupImage src={data.src} alt={data.alt} />
+                    <CloseButton onClick={handleClosePopup}>X</CloseButton>
+                  </PopupOverlay>
+                  <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
+                    <div style={{marginTop: '1.2rem'}}>
+                    <ExpandButton onClick={() => handleOpenPopup(data.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                    </div>
+                    <Dropdown data={data.text} />
+                  </div>
+                </ImageWrapper>    
+              </>
+            ))}
+          </div>
+</BodyWrapper>
     </div>
   );
 };

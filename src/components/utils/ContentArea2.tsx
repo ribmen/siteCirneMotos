@@ -6,7 +6,7 @@ interface ContentAreaProps {
   children: React.ReactNode;
 }
 
-const ContentAreaWrapper = styled.div<{ isVisible: boolean }>`
+const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
   background-color: ${({ theme }) => theme.colors.neutral.light};
   padding: ${({ theme }) => theme.spacing.large};
   border-radius: 2px;
@@ -18,22 +18,22 @@ const ContentAreaWrapper = styled.div<{ isVisible: boolean }>`
   transition: opacity 0.5s ease, transform 0.5s ease;
 
   /* Animação de entrada */
-  ${({ isVisible }) => isVisible && `
+  ${({ isvisible }) => isvisible && `
     opacity: 1;
     transform: translateY(0);
   `}
 `;
 
 const ContentArea2: React.FC<ContentAreaProps> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isvisible, setisvisible] = useState(false);
 
   // Ativar a animação após o carregamento da página
   useEffect(() => {
-    setIsVisible(true);
+    setisvisible(true);
   }, []);
 
   return (
-    <ContentAreaWrapper isVisible={isVisible}>
+    <ContentAreaWrapper isvisible={isvisible}>
       {children}
     </ContentAreaWrapper>
   );

@@ -127,16 +127,16 @@ const DropdownButton = styled.button`
   }
 `;
 
-const DropdownIcon = styled.span<{ isOpen: boolean }>`
+const DropdownIcon = styled.span<{ isopen: boolean }>`
   display: inline-block;
   transition: transform 0.3s ease;
-  ${({ isOpen }) => isOpen && css`
+  ${({ isopen }) => isopen && css`
     transform: rotate(180deg);
   `}
 `;
 
-const DropdownContent = styled.div<{ isOpen: boolean }>`
-  display: ${({ isOpen }) => (isOpen ? "block" : "none")};
+const DropdownContent = styled.div<{ isopen: boolean }>`
+  display: ${({ isopen }) => (isopen ? "block" : "none")};
   position: absolute;
   right: 0;
   background-color: ${({ theme }) => theme.colors.neutral.light};
@@ -189,9 +189,9 @@ const Header: React.FC = () => {
           <NavLink to="/organogramaDCO">Organograma e DCO</NavLink>
           <DropdownWrapper>
             <DropdownButton onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
-              Mais <DropdownIcon isOpen={isDropdownOpen}>▼</DropdownIcon>
+              Mais <DropdownIcon isopen={isDropdownOpen}>▼</DropdownIcon>
             </DropdownButton>
-            <DropdownContent isOpen={isDropdownOpen}>
+            <DropdownContent isopen={isDropdownOpen}>
               <DropdownItem to="/fluxos">Fluxogramas de Processos</DropdownItem>
               <DropdownItem to="/pops">POPs</DropdownItem>
               <DropdownItem to="/creditos">Créditos</DropdownItem>

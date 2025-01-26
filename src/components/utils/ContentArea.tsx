@@ -4,9 +4,10 @@ import styled from 'styled-components';
 
 interface ContentAreaProps {
   children: React.ReactNode;
+  
 }
 
-const ContentAreaWrapper = styled.div<{ isVisible: boolean }>`
+const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
   background-color: ${({ theme }) => theme.colors.neutral.light};
   padding: ${({ theme }) => theme.spacing.large};
   border-radius: 2px;
@@ -18,14 +19,14 @@ const ContentAreaWrapper = styled.div<{ isVisible: boolean }>`
   transition: opacity 0.5s ease, transform 0.5s ease;
 
   /* Animação quando o componente estiver visível */
-  ${({ isVisible }) => isVisible && `
+  ${({ isvisible }) => isvisible && `
     opacity: 1;
     transform: translateY(0);
   `}
 `;
 
 const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isvisible, setisvisible] = useState(false);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
   // Detecta se o componente entrou na tela
@@ -33,9 +34,9 @@ const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
     if (contentRef.current) {
       const rect = contentRef.current.getBoundingClientRect();
       if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-        setIsVisible(true);
+        setisvisible(true);
       } else {
-        setIsVisible(false);
+        setisvisible(false);
       }
     }
   };
@@ -52,7 +53,7 @@ const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
   }, []);
 
   return (
-    <ContentAreaWrapper ref={contentRef} isVisible={isVisible}>
+    <ContentAreaWrapper ref={contentRef} isvisible={isvisible}>
       {children}
     </ContentAreaWrapper>
   );
