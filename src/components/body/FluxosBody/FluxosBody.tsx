@@ -15,7 +15,7 @@ const BodyWrapper = styled.main`
   padding: 0;
 `;
 
-const FlexContainer = styled.div`
+export const FlexContainer = styled.div`
   display: flex;
   gap: 2rem; 
   align-items: center; 
@@ -41,7 +41,7 @@ const TextColumn = styled.div`
   }
 `;
 
-const ImageColumn = styled.div`
+export const ImageColumn = styled.div`
   flex: 1;
   img {
     max-width: 100%;
@@ -50,7 +50,7 @@ const ImageColumn = styled.div`
 `;
 
 // Implementação da expansão da imagem
-const ExpandButton = styled.button`
+export const ExpandButton = styled.button`
   bottom: 1rem;
   right: 1rem;
   background: #cc0000;
@@ -71,7 +71,7 @@ const ExpandButton = styled.button`
 `;
 
 // Overlay do popup
-const PopupOverlay = styled.div<{ show: boolean }>`
+export const PopupOverlay = styled.div<{ show: boolean }>`
   display: ${({ show }) => (show ? "flex" : "none")};
   position: fixed;
   top: 0;
@@ -96,7 +96,7 @@ const PopupOverlay = styled.div<{ show: boolean }>`
 `;
 
 
-const PopupImage = styled.img`
+export const PopupImage = styled.img`
   max-width: 90%;
   max-height: 90%;
   border-radius: 10px;
@@ -113,7 +113,7 @@ const PopupImage = styled.img`
 `;
 
 // Botão de fechar
-const CloseButton = styled.button`
+export const CloseButton = styled.button`
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -135,7 +135,7 @@ const CloseButton = styled.button`
   }
 `;
 
-const ImageWrapper = styled.div`
+export const ImageWrapper = styled.div`
   position: relative;
   display: inline-block;
   max-width: 70%;

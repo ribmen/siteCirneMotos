@@ -104,7 +104,7 @@ const Banner = styled.img`
   margin-bottom: 2rem;
 `;
 
-export const Pops: React.FC = () => {
+export const PopsComercial: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -115,34 +115,16 @@ export const Pops: React.FC = () => {
       <BodyWrapper>
         <ContentArea2>
 
-        <Title>POPS (Procedimentos Operacionais Padrão)</Title>
+        <Title>POPS <strong>COMERCIAL</strong></Title>
 
         <Section>
-          <SectionTitle>O que é um POP?</SectionTitle>
+          <SectionTitle></SectionTitle>
           <p>
-          Os <strong>Procedimentos Operacionais Padrão (POPs)</strong> são tutoriais detalhados e passo a passo que orientam a execução de atividades e processos nos sistemas utilizados pela empresa, como o P21, Cloud, IHS, entre outros. Eles garantem que todos os colaboradores sigam as mesmas práticas, assegurando consistência, eficiência e a redução de erros nas operações.
+        
           </p>
         </Section>
 
-        <Section>
-          <FlexContainer>
-            <LeftImage src={pensamento} />
-            <TextContent>
-              <p>Os POPs fornecem instruções claras para o uso dos sistemas, desde tarefas simples até processos mais complexos, facilitando a aprendizagem e o alinhamento entre as equipes. Ao seguir esses procedimentos, a Cirne Motos Honda assegura que todas as atividades sejam realizadas conforme os padrões estabelecidos, promovendo a eficácia e a qualidade em todas as áreas.
-              </p>
-            </TextContent>
-          </FlexContainer>
-        </Section>
-        <Section>
-          <SectionTitle>Acesso aos conteúdos</SectionTitle>
-          <TextContent>
-            <p>Acesse, clicando nos LINKS a seguir, os respectivos Procedimentos Operacionais Padrão para os setores comercial e administrativo:</p>
-            <ul>
-              <li><NavLink to='/popscomercial'><strong>POPs COMERCIAL</strong></NavLink></li>
-              <li><NavLink to='/popsadministrativo'><strong>POPs ADMINISTRATIVO</strong></NavLink></li>
-            </ul>
-          </TextContent>
-        </Section>
+        
 
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>

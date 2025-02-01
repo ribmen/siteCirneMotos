@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
           <FooterLink href="https://wa.me/+5584981883488" target="_blank">Fale conosco</FooterLink>
           <FooterLink href="https://www.cirnemotos.com.br/" target="_blank">Visite nosso site oficial</FooterLink>
         </FooterLinks>
-        <p>© 2025 Cirne Motos, todos os direitos reservados.</p>
+        <p>© 2025 Cirne Motos | Todos os direitos reservados.</p>
         <p>Desenvolvido por <a href="https://github.com/ribmen" target="_blank">@ribmen</a>.</p>
       </FooterText>
       <Logo style={{marginRight: '3rem'}} src={TF} alt="TEIXEIRA FREIRE Logo" />

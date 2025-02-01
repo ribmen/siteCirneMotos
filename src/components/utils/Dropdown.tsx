@@ -27,7 +27,7 @@ const Button = styled.button`
 
 const TextContent = styled.div<{ visible: boolean }>`
   overflow: hidden;
-  max-height: ${(props) => (props.visible ? "2000px" : "0")}; /* Ajuste o valor máximo para comportar o texto */
+  max-height: ${(props) => (props.visible ? "20000px" : "0")}; /* Ajuste o valor máximo para comportar o texto */
   transition: max-height 0.5s ease, padding 0.3s ease; /* Transição suave */
   margin-top: ${(props) => (props.visible ? "10px" : "0")}; /* Evita deslocamento brusco */
   padding: ${(props) => (props.visible ? "15px" : "0 15px")};
@@ -46,7 +46,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ data }) => {
   return (
     <Container>
       <Button onClick={toggleVisibility}>
-        {isVisible ? "Ocultar Texto " : "Mostrar Texto "}
+        {isVisible ? "Ocultar Texto " : "Mostrar descrição das atividades "}
         {isVisible ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"

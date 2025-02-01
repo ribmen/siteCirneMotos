@@ -30,7 +30,7 @@ export const SectionTitle = styled.h2`
   padding-left: 1rem;
 `;
 
-const TextContent = styled.p`
+export const TextContent = styled.p`
   margin-bottom: 1rem;
   line-height: 1.6;
   font-size: 1.2rem;
