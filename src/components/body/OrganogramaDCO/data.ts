@@ -472,6 +472,372 @@ export const data = [
   title: 'ADMINISTRATIVO',
   alt: 'Organograma Administrativo',
   text: `
+  <h2>1. Administrativo HSF - CONSÓRCIO
+</h2>
+<h3>Missão do Cargo
+</h3>
+<p>Gerenciar as operações administrativas relacionadas ao consórcio, garantindo a precisão na emissão de documentos, no faturamento e nas reservas, além de assegurar a conformidade dos processos internos e o suporte aos clientes e setores envolvidos.
+</p>
+
+<h3>Responsabilidades e Atividades
+</h3>
+<ul>
+  <li><strong>Emissão de Boletos: </strong>Gerar e emitir boletos para consorciados, verificando valores e vencimentos, e garantir o registro correto das informações financeiras no sistema de consórcios.
+
+</li><strong>Faturamento de Motocicletas</strong>
+  <ul>
+  <li>Realizar o faturamento das motocicletas em casos de contemplação, utilizando as plataformas IHS e Cloud.
+</li>
+  <li>Preparar propostas de faturamento conforme as políticas internas e acompanhar o processo até sua finalização e confirmação ao cliente e ao setor responsável.</li>
+  </ul>
+
+
+  <li><strong>Reservas de Motocicletas: </strong>Efetuar reservas de motocicletas para clientes contemplados ou com solicitações específicas no sistema Microwork (Cloud), assegurando a disponibilidade até o pagamento e faturamento.
+</li>
+
+  <li><strong>Gestão de Numeração e Alterações de Modelos: </strong>
+  <ul>
+    <li>Realizar ajustes financeiros necessários relacionados ao numerário.
+</li>
+    <li>Alterar modelos de motocicletas conforme solicitado pelos clientes, atualizando os documentos e sistemas.
+</li>
+  </ul>
+</li>
+
+  <li><strong>Relacionamento com Setor Administrativo (HSF): </strong>Colaborar com o setor administrativo HSF para obter assinaturas e aprovações, mantendo uma comunicação eficiente e garantindo conformidade nos processos.
+</li>
+  <li><strong>Apoio Administrativo e Controle de Documentos: </strong>
+    <ul>
+      <li>Organizar e arquivar documentos físicos e digitais, preservando segurança e confidencialidade.
+</li>
+      <li>Fornecer suporte na elaboração de relatórios de vendas e faturamento e em outras tarefas administrativas relacionadas ao consórcio.</li>
+    </ul>
+  </li>
+</ul>
+
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+<li>Organização e atenção aos detalhes.
+</li>
+<li>Comunicação clara e eficaz com clientes e equipes internas.
+</li>
+<li>Habilidade para gerenciar prazos e múltiplas tarefas simultaneamente.
+</li>
+<li>Proatividade na resolução de problemas e ajustes necessários nos processos.
+</li>
+<li>Conhecimentos de Informática (Sistemas, Pacote Office, etc.)
+</li>
+<li>Experiência em emissão de boletos e controle financeiro de consórcios.
+</li>
+<li>Conhecimento sobre políticas de faturamento e consignação.
+</li>
+<li>Habilidade em arquivamento e gestão de documentos físicos e digitais.
+</li>
+<li>Capacidade de gerar relatórios administrativos e financeiros relacionados ao consórcio.
+</li>
+</ul>
+
+<h3>Formação acadêmica:</h3>
+<p>Nível médio completo</p>
+
+
+
+<h2>2. Supervisor de Pós-Venda</h2>
+<h3>Missão do Cargo</h3>
+<p>Garantir a excelência nos processos de pós-venda, supervisionando a equipe, utilizando sistemas como IHS e Cloud para gerenciar atividades como recebimento, checagem, retenção de clientes e ajustes administrativos, promovendo a satisfação do cliente e a eficiência operacional.
+</p>
+
+<h3>Atividades realizadas: </h3>
+<ul>
+  <li><strong>1. Supervisão de equipe: </strong>Coordenar as atividades do time de pós-venda, garantindo qualidade e eficiência no atendimento.
+</li>
+  <li><strong>2. Uso de sistemas: </strong>Operar e supervisionar atividades nos sistemas IHS e Cloud, garantindo a atualização correta dos dados.
+</li>
+  <li><strong>3. Borderô: </strong>Gerar e validar o borderô de pagamentos e movimentações financeiras relacionadas ao pós-venda.
+</li>
+  <li><strong>4. Retenção de clientes: </strong>Criar estratégias e ações para fidelizar clientes e reduzir índices de cancelamento.
+</li>
+  <li><strong>5. Ajustes administrativos: </strong>Realizar acertos de lance e atualizações de modelo de motocicleta no sistema conforme solicitações e normas internas.
+</li>
+  <li><strong>6. Checagem e recebimento: </strong>Acompanhar o recebimento e a conferência de documentos e processos.
+</li>
+  <li><strong>7. Relatórios e metas: </strong>Monitorar indicadores de desempenho da equipe e reportar resultados.
+</li>
+  <li><strong>8. Treinamento e suporte: </strong>Fornecer orientação e capacitação contínua para a equipe, visando melhoria contínua.
+</li>
+  <li><strong>9. Satisfação do cliente: </strong>Resolver problemas e implementar soluções para garantir a melhor experiência no pós-venda.
+</li>
+  <li><strong>10. Acompanhar adimplência: </strong>Monitorar os pagamentos e a regularidade dos contratos, tomando as ações necessárias para resolver inadimplências e garantir conformidade com as normas da empresa.
+</li>
+</ul>
+
+<h2>3. Consultor de Pós-Venda – Consorcio Nacional Honda (CNH)</h2>
+<h3>Missão do Cargo</h3>
+<p>Atender e apoiar os clientes do Consórcio Nacional Honda no pós-venda, garantindo satisfação e retenção por meio de processos administrativos precisos, uso de sistemas como IHS e Cloud, e soluções eficientes para ajustes, acertos de lance e gestão de modelos de motocicletas.
+</p>
+
+<h3>Formação acadêmica:</h3>
+<p>Nível médio completo</p>
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+  <li>Comunicação clara e empática.
+</li>
+  <li>Proatividade e resolução de problemas.
+</li>
+  <li>Organização e atenção aos detalhes.
+</li>
+  <li>Habilidade para trabalhar com metas e prazos.
+</li>
+  <li>Conhecimentos em ferramentas digitais, sistemas e pacote Office.</li>
+  <li>Capacidade de retenção e fidelização de clientes.</li>
+  <li>Flexibilidade e adaptabilidade.</li>
+  <li>Relacionamento interpessoal.
+</li>
+  <li>Conhecimento em processos administrativos e financeiros.</li>
+  <li>Foco no cliente e em resultados.
+</li>
+</ul>
+
+<h3>Atividades realizadas: </h3>
+<ul>
+  <li><strong>1. Atendimento ao cliente: </strong>Prestar suporte personalizado no pós-venda, solucionando dúvidas e demandas relacionadas ao consórcio.</li>
+
+  <li><strong>2. Uso de sistemas: </strong>Operar sistemas como IHS e Cloud para gerenciar processos e manter dados atualizados.
+</li>
+
+  <li><strong>3. Acerto de lance: </strong>Realizar ajustes e validações de lances, garantindo que estejam em conformidade com as normas do consórcio.
+</li>
+  <li><strong>4. Mudança de modelo: </strong>Atualizar informações no sistema sobre alterações de modelos de motocicletas adquiridas pelos clientes.
+</li>
+  <li><strong>Borderô: </strong>Auxiliar na conferência e controle de pagamentos e movimentações financeiras.
+</li>
+  <li><strong>6. Retenção de clientes: </strong>Desenvolver estratégias para fidelizar clientes e reduzir desistências, promovendo a continuidade do consórcio.
+</li>
+  <li><strong>7. Documentação: </strong>Gerenciar o recebimento, checagem e regularização de documentos relacionados ao consórcio.
+</li>
+  <li><strong>8. Follow-up: </strong>Realizar acompanhamentos regulares com os clientes para garantir satisfação e resolução de pendências.
+</li>
+  <li><strong>9. Atividade de Reativação de Cliente: </strong>Entrar em contato com clientes que interromperam o pagamento da moto para reverter inadimplência 
+</li>
+  <li><strong>Acompanhar adimplência: </strong>Monitorar os pagamentos e a regularidade dos contratos, tomando as ações necessárias para resolver inadimplências e garantir conformidade com as normas da empresa.
+</li>
+</ul>
+
+<h2>4. Supervisor de Vendas Externas</h2>
+<h3>Missão do Cargo</h3>
+<p>Garantir a eficiência e a organização das vendas externas, planejando e supervisionando caravanas e visitas a clientes, com foco na prospecção, perseguição de clientes e no alcance das metas estabelecidas.
+</p> 
+
+<h3>Atividades realizadas</h3>
+<ul>
+  <li>1. Organização e Coordenação de Caravanas: </li>
+    <ul>
+      <li>Planejar e estruturar caravanas de vendedores para prospectar novos clientes em áreas específicas.
+</li>
+      <li>Realizar a concentração antes das caravanas, definindo os vendedores que participarão.
+</li>
+      <li>Manejar vendedores que não participam das caravanas, direcionando-os para visitas específicas.
+</li>
+    </ul>
+  <li>2. Gerenciamento de Atividades de Prospecção (PaP):
+</li>
+  <ul>
+    <li>Supervisionar o trabalho Porta a Porta (PaP) realizado pelos vendedores.</li>
+  </ul>
+
+  <li>3. Administração da Perseguição de Clientes</li>
+    <ul>
+      <li>Coordenar e monitorar a perseguição de clientes durante a tarde, garantindo que os vendedores mantenham o contato necessário para fechar vendas.
+</li>
+      <li>Realizar o acompanhamento das vendas em andamento e oferecer suporte aos vendedores para atingir resultados.
+</li>
+    </ul>
+  <li>4. Uso de Aplicativos e Sistemas: </li>
+    <ul>
+      <li>Utilizar ferramentas como IHS, Cloud e P2E para gerenciar as atividades de vendas, agendamentos e controle de clientes.</li>
+      <li>Administrar a distribuição de vendedores entre caravanas e visitas a clientes, utilizando os sistemas para organização e registro das ações.</li>
+    </ul>
+  <li><strong>5. Acompanhar adimplência no IHS, Cloud e P2E: </strong>Monitorar pagamentos e resolver inadimplências nos sistemas IHS, Cloud e P2E.
+</li>
+  <li><strong>6. Acompanhar Leads de Vendedores: </strong>Supervisionar a gestão de leads, garantindo follow-up e conversão em vendas.</li>
+  <li></strong>7. Realizar Treinamentos e Capacitações: </strong>Conduzir treinamentos regulares e avaliar a eficácia para melhorar a performance da equipe.
+</li>
+</ul>
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+  <li>Planejamento e Organização 
+</li>
+  <li>Liderança e Gestão de Equipes
+</li>
+  <li>Comunicação e Relacionamento Interpessoal
+</li>
+  <li>Orientação para Resultados
+</li>
+  <li>Análise e Tomada de Decisão
+</li>
+  <li>Conhecimento de Ferramentas Digitais, sistemas e Pacote Office
+</li>
+</ul>
+
+<h3>Formação Acadêmica</h3>
+<p>Nível médio completo</p>
+
+<h2>5. Vendedor de Vendas Externas
+</h2>
+<h3>Missão do Cargo</h3>
+<p>Realizar a prospecção ativa e visitas externas a clientes, buscando oportunidades de vendas, promovendo os produtos da empresa.
+</p>
+
+<h3>Atividades realizadas</h3>
+<ul>
+  <li><strong>1. Prospecção de Clientes</strong>
+    <ul>
+      <li>Identificar e abordar potenciais clientes nas ruas, estabelecimentos e regiões específicas durante as caravanas e trabalho PaP (Porta a Porta).
+</li>
+      <li>Apresentar os produtos da Honda Motos.</li>
+    </ul>
+  </li>
+
+  <li><strong>2. Participação em Caravanas e Visitas</strong>
+    <ul>
+      <li>Participar das caravanas organizadas pelo supervisor, seguindo as diretrizes e metas estabelecidas.
+</li>
+      <li>Realizar visitas específicas a clientes, conforme orientação do supervisor.
+</li>
+    </ul>
+  </li>
+  <li><strong>3. Uso de aplicativos registros</strong>
+    <ul>
+      <li>Registrar todas as ações e vendas realizadas nos aplicativos IHS, Cloud e P2E.</li>
+      <li>Organizar e atualizar as informações sobre clientes e prospects nos sistemas utilizados pela empresa.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+  <li>Comunicação e Persuasão
+</li>
+  <li>Relacionamento Interpessoal
+</li>
+  <li>Foco em Resultados
+</li>
+  <li>Organização e Disciplina
+</li>
+  <li>Conhecimentos em Informática e uso de Sistemas
+</li>
+  <li>Proatividade e Resiliência:</li>
+</ul>
+
+<h3>Formação Acadêmica</h3>
+<p>Nível médio completo</p>
+
+<h2>6. Gerente de Vendas Externas</h2>
+<h3>Missão do Cargo:</h3>
+<p>Gerenciar e orientar as equipes de vendas externas, supervisores e setores administrativos relacionados, assegurando o cumprimento de metas de vendas e a manutenção da qualidade nos processos comerciais e operacionais. Atuar de forma estratégica e prática, garantindo alinhamento com os objetivos da Cirne Motos Honda e promovendo o desenvolvimento contínuo da equipe por meio de suporte, treinamentos e ajustes necessários.</p>
+
+<h3>Atividades realizadas</h3>
+<ul>
+  <li><strong>Gestão de Equipes:</strong>
+    <ul>
+      <li>Supervisionar e orientar os supervisores e equipes de vendas externas, assegurando o cumprimento das metas.
+</li>
+      <li>Participar de processos seletivos para contratação de colaboradores.</li>
+    </ul>
+  </li>
+
+  <li><strong>Gestão de Vendas:
+</strong>
+    <ul>
+      <li>Acompanhar e monitorar a qualidade das vendas realizadas nas modalidades consórcio, CDC e à vista.
+</li>
+  
+    </ul>
+  </li>
+  <li><strong>Suporte e Ajustes</strong>
+    <ul>
+      <li>Oferecer suporte aos setores administrativo, consórcio e CNH, propondo ajustes operacionais.
+</li>
+    </ul>
+  </li>
+
+  <li><strong>Treinamentos</strong>
+    <ul>
+      <li>Acompanhar e ajustar treinamentos para aprimorar a equipe de vendas.
+</li>
+    </ul>
+  </li>
+  <li><strong>Monitoramento Operacional</strong>
+    <ul>
+      <li>Revisar processos administrativos e garantir eficiência nos resultados das áreas envolvidas.
+</li>
+    </ul>
+  </li>
+</ul>
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+  <li>Liderança e capacidade de motivar equipes.
+</li>
+  <li>Organização e foco em resultados.
+</li>
+  <li>Capacidade analítica para interpretar e atuar sobre indicadores de desempenho.
+</li>
+  <li>Conhecimento em ferramentas de informática e Pacote Office (Word, Excel, PowerPoint) em nível intermediário.
+</li>
+  <li>Habilidade para realizar treinamentos e desenvolver pessoas.
+</li>
+  <li>Boa comunicação verbal e escrita.
+</li>
+  <li>Flexibilidade e capacidade de adaptação a mudanças.
+</li>
+</ul>
+
+<h3>Formação Acadêmica</h3>
+<p>Nível médio completo</p>
+
+<h2>7. MULTIPLICADOR DE TREINAMENTOS (Presente em COMERCIAL e ADM)</h2>
+<h3>Missão do Cargo:
+</h3>
+<p>Planejar, organizar e realizar treinamentos e palestras estratégicas para capacitar e desenvolver colaboradores nas áreas de sistemas, trânsito, consórcio, administração, pós-venda e banco, alinhando as práticas operacionais e comerciais aos objetivos e padrões da Cirne Motos Honda.
+</p>
+
+<h3>Atividades realizadas: </h3>
+<ul>
+  <li>Planejamento de Treinamentos: Elaborar cronogramas e conteúdos alinhados às demandas das áreas de sistemas, trânsito, consórcio, administração, pós-venda e banco.
+</li>
+  <li>Execução de Treinamentos: Conduzir palestras e treinamentos, aplicando metodologias eficazes para capacitação da equipe.
+</li>
+  <li>Monitoramento e Avaliação: Avaliar a eficácia dos treinamentos e ajustar conteúdos conforme necessário.</li>
+  <li>Gestão de Materiais: Criar e atualizar materiais didáticos e recursos de apoio.
+</li>
+  <li>Suporte Estratégico: Apoiar gestores na implementação de práticas alinhadas aos treinamentos.
+</li>
+</ul>
+
+<h3>Formação acadêmica:</h3>
+<p>Nível médio completo</p>
+
+<h3>Habilidades e Competências do Cargo:</h3>
+<ul>
+  <li>Planejamento e organização para desenvolver cronogramas e conteúdos de treinamento.
+</li>
+  <li>Comunicação clara e didática para condução de palestras e treinamentos.
+</li>
+  <li>Conhecimento técnico nas áreas de sistemas, trânsito, consórcio, administração, pós-venda e banco.
+</li>
+  <li>Domínio de ferramentas de informática e Pacote Office (Word, Excel, PowerPoint).
+</li>
+  <li>Capacidade de análise e avaliação de resultados de treinamento.
+</li>
+  <li>Flexibilidade e proatividade para ajustar conteúdos conforme as necessidades da empresa.
+</li>
+  <li>Capacidade plena de entender pessoas
+</li>
+</ul>
   `
 }
 ];
