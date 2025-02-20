@@ -5,9 +5,11 @@ import styled from 'styled-components';
 import ContentArea2 from '../../utils/ContentArea2'
 import banner from '../../../assets/banners/fluxogramas.jpg';
 import planejamento from '../../../assets/planejamento.jpg';
-import {data} from "./data";
+import {dataAux} from "./dataAux";
+import {dataVendedor} from "./dataVendedor";
 import { Dropdown } from '../../utils/Dropdown';
 import { Button } from '../ConceitosBody/ConceitosBody';
+import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -178,7 +180,7 @@ export const FluxosBody: React.FC = () => {
       <BodyWrapper>
         {/* Primeira ContentArea com texto e imagem lado a lado */}
         <ContentArea2>
-            <h1 className='fluxosTitle'>Fluxogramas de processos</h1>
+            <h1 className='fluxosTitle'>Fluxogramas de processos </h1>
 
           <FlexContainer>
             <ImageColumn>
@@ -192,12 +194,18 @@ export const FluxosBody: React.FC = () => {
               </p>
             </TextColumn>         
           </FlexContainer>
+          <SectionTitle>Fluxogramas COMERCIAL</SectionTitle>
           <nav className='table-of-contents'>
             <h1 className='sumarioTitle'>Sumário</h1>
+            <h3 style={{marginBottom: 0}}>Auxiliar de vendas</h3>
             <SumarioTopics>
               <li><a href="#section1">Processo de Faturamento</a></li>
               <li><a href="#section2">Entrega da moto</a></li>
               <li><a href="#section3">Emplacamento</a></li>
+            </SumarioTopics>
+
+            <h3 style={{marginBottom: 0}}>Vendedor</h3>
+            <SumarioTopics>
               <li><a href="#section4">Processo de vendas</a></li>
               <li><a href="#section5">Apresentação da moto</a></li>
               <li><a href="#section5">Processo de perseguição do cliente</a></li>
@@ -208,31 +216,57 @@ export const FluxosBody: React.FC = () => {
 
  {/*        <ContentArea2> */}
           <div>
-            {data.map((data) => (
+          <h1 className='fluxosTitle'>Cargo Auxiliar de vendas </h1>
+            {dataAux.map((dataAux) => (
               <>
-                <h1>{data.title}</h1>
-                <ImageWrapper key={data.id}>
-                  <img style={{maxWidth: '100%', height: 'auto'}} src={data.src} alt={data.alt} />
-                  <PopupOverlay show={popupImageId === data.id}>
-                    <PopupImage src={data.src} alt={data.alt} />
+                <h1>{dataAux.title}</h1>
+                <ImageWrapper key={dataAux.id}>
+                  <img style={{maxWidth: '100%', height: 'auto'}} src={dataAux.src} alt={dataAux.alt} />
+                  <PopupOverlay show={popupImageId === dataAux.id}>
+                    <PopupImage src={dataAux.src} alt={dataAux.alt} />
                     <CloseButton onClick={handleClosePopup}>X</CloseButton>
                   </PopupOverlay>
                   <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
                     <div style={{marginTop: '1.2rem'}}>
-                    <ExpandButton onClick={() => handleOpenPopup(data.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                    <ExpandButton onClick={() => handleOpenPopup(dataAux.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
                     </div>
-                    <Dropdown data={data.text} />
+                    <Dropdown data={dataAux.text} />
                   </div>
                 </ImageWrapper>    
               </>
-            ))}
+            ),
+            )
+          }
+          <div>
+          <h1 className='fluxosTitle'>Cargo Vendedor </h1>
+          {dataVendedor.map((dataVendedor) => (
+                <>
+                  <h1>{dataVendedor.title}</h1>
+                <ImageWrapper key={dataVendedor.id}>
+                  <img style={{maxWidth: '100%', height: 'auto'}} src={dataVendedor.src} alt={dataVendedor.alt} />
+                  <PopupOverlay show={popupImageId === dataVendedor.id}>
+                    <PopupImage src={dataVendedor.src} alt={dataVendedor.alt} />
+                    <CloseButton onClick={handleClosePopup}>X</CloseButton>
+                  </PopupOverlay>
+                  <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
+                    <div style={{marginTop: '1.2rem'}}>
+                    <ExpandButton onClick={() => handleOpenPopup(dataVendedor.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                    </div>
+                    <Dropdown data={dataVendedor.text} />
+                  </div>
+                </ImageWrapper>   
+                </>
+              ))}
           </div>
-          <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
+
+          </div>
+            <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
                       <Button onClick={scrollToTop}>
                         Voltar ao topo
                       </Button>
-                    </div>
-</BodyWrapper>
+            </div>
+      </BodyWrapper>
     </div>
+
   );
 };

@@ -115,9 +115,15 @@ export const PopsComercial: React.FC = () => {
       <BodyWrapper>
         <ContentArea2>
 
-        <Title>POPS <strong>COMERCIAL</strong></Title>
+        <Title>POPS COMERCIAL</Title>
 
         <Section>
+          
+          
+        </Section>
+
+        <Section>
+          <h1></h1>
           <SectionTitle></SectionTitle>
           <p>
         

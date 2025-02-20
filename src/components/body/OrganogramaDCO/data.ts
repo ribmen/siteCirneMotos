@@ -1,18 +1,8 @@
-import geral from '../../../assets/organograma-dco/Organograma-Honda.jpg'
 import comercial from '../../../assets/organograma-dco/organograma-com.png'
 import adm from '../../../assets/organograma-dco/organograma-adm.png'
 
 export const data = [
-{
-  id: 1,
-  src: geral,
-  alt: 'Organograma Geral',
-  title: 'GERAL',
-  text: `
-    
-    
-  `
-},
+
 {
   id: 2,
   src: comercial,
@@ -165,7 +155,7 @@ export const data = [
 
 
 
-<h2>5. Auxiliar de Vendas: Financiamento e Seguro</h2>
+<h2>5. Auxiliar de Vendas: Financiamento e Seguro (F&I)</h2>
 <h3>Missão do Cargo:</h3>
 <p>Apoiar o processo de vendas e gestão de seguros, com foco em operações de financiamento e administração de apólices.</p>
 

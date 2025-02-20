@@ -7,7 +7,7 @@ import "../InicioBody/body.css";
 import { Button } from '../ConceitosBody/ConceitosBody';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
 import { CloseButton, ExpandButton, ImageColumn, ImageWrapper, PopupImage, PopupOverlay } from '../FluxosBody/FluxosBody';
-import geral from '../../../assets/organograma-dco/Organograma-Honda.jpg';
+import geral from '../../../assets/organograma-dco/Organograma-Honda.jpg'
 import {data} from './data';
 import { Dropdown } from '../../utils/Dropdown';
 
@@ -112,6 +112,19 @@ export const OrganogramaDCO: React.FC = () => {
         </ContentArea2>
 
         <div>
+          <ImageWrapper key={1}>
+            <SectionTitle>GERAL</SectionTitle>
+            <img style={{maxWidth: '100%', height: 'auto'}} src={geral} alt="Organograma Geral"/>
+            <PopupOverlay show={popupImageId === 1}>
+              <PopupImage src={geral} alt='Organograma Geral'/>
+              <CloseButton onClick={handleClosePopup}>X</CloseButton>
+            </PopupOverlay>
+            <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
+                            <div style={{marginTop: '1.2rem'}}>
+                            <ExpandButton onClick={() => handleOpenPopup(1)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                            </div>
+                          </div>
+          </ImageWrapper>
                     {data.map((data) => (
                       
                         <ImageWrapper key={data.id}>
