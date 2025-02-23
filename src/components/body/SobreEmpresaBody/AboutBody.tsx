@@ -14,14 +14,6 @@ const AboutWrapper = styled.div`
   line-height: 1.8;
 `;
 
-const Section = styled.section`
-  margin: 2rem auto;
-  padding: 2rem;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-`;
-
 export const SectionTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;

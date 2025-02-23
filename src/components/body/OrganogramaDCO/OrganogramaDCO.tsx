@@ -6,7 +6,7 @@ import gerente from '../../../assets/gerente-produto.jpg';
 import "../InicioBody/body.css";
 import { Button } from '../ConceitosBody/ConceitosBody';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
-import { CloseButton, ExpandButton, ImageColumn, ImageWrapper, PopupImage, PopupOverlay } from '../FluxosBody/FluxosBody';
+import { CloseButton, ExpandButton, ImageWrapper, PopupImage, PopupOverlay } from '../FluxosBody/FluxosBody';
 import geral from '../../../assets/organograma-dco/Organograma-Honda.jpg'
 import {data} from './data';
 import { Dropdown } from '../../utils/Dropdown';
