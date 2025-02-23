@@ -1,8 +1,8 @@
 .fluxosTitle {
   color: #cc0000;
   font-size: 2.5rem;
-  margin-bottom: 2rem;  /* Remove margens externas */
-  text-align: left; /* Alinha o texto à esquerda */
+  margin-bottom: 2rem;
+  text-align: left;
 }
 
 .sumarioTitle {

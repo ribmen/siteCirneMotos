@@ -1,9 +1,5 @@
 import emplacamento1 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-1.png'
-import emplacamento2 from '../../../assets/fluxogramas/Fluxograma-Emplacamento-e-Semi-novos-2.png'
 import faturamento from '../../../assets/fluxogramas/Fluxograma-Faturamento-2.png';
-import venda from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-1.png'
-import apresentacao from '../../../assets/fluxogramas/Processo-de-Venda-e-Apresentacao-da-Moto-COMERCIAL-2.png'
-import perseguicao from '../../../assets/fluxogramas/Fluxo-Comercial-Perseguição.png'
 import entrega from '../../../assets/fluxogramas/Fluxo-Entrega-da-moto.png'
 
 export const dataAux = [

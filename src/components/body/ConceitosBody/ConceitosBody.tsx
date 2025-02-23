@@ -7,7 +7,6 @@ import banner from '../../../assets/honda-legacy2.jpg';
 import salesman from '../../../assets/salesman.jpg';
 import missaoValores from '../../../assets/missaovalores2.jpg';
 import mulher from '../../../assets/mulher-honda.jpg';
-import soichiroMoto from '../../../assets/soichiro-moto.jpg';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
 
 
@@ -28,13 +27,6 @@ const Title = styled.h1`
 
 const Section = styled.section`
   margin-bottom: 2rem;
-`;
-
-const Subtitle = styled.h2`
-  color: #444;
-  font-size: 1.8rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
 `;
 
 const Image = styled.img`

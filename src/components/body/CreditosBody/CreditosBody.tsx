@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import bannerCirne from '../../../assets/banners/cirne-loja.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
 import handshake from '../../../assets/handshake.jpg';
 import motivacional from '../../../assets/videos/the-real-slim-video.mp4';
@@ -36,30 +35,6 @@ const Title = styled.h1`
   background-color: 'rgba(0, 0, 0, 0.5)';
   top: 13rem;
   left: 14rem;
-`;
-
-const ValuesList = styled.ul`
-  list-style: none;
-  margin: 0;
-  padding: 0;
-
-  li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0.8rem;
-
-    &::before {
-      content: '✓';
-      color: #cc0000;
-      font-weight: bold;
-      margin-right: 0.5rem;
-    }
-
-    span {
-      font-size: 1.2rem;
-      color: #333;
-    }
-  }
 `;
 
 export const CreditosBody: React.FC = () => {

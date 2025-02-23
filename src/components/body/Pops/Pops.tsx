@@ -6,7 +6,6 @@ import pensamento from '../../../assets/organogramadco.jpg';
 import "../InicioBody/body.css";
 import { Button } from '../ConceitosBody/ConceitosBody';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
-import { Link } from 'react-router-dom';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -23,51 +22,8 @@ const Title = styled.h1`
   margin-top: 0;
 `;
 
-const NavLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.neutral.dark};
-  position: relative; 
-  text-decoration: none; 
-  
-  &:hover,
-  &:focus {
-    color: ${({ theme }) => theme.colors.primary};
-  }
-
-  &::after {
-    content: ''; 
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
-    height: 2px;
-    background-color: ${({ theme }) => theme.colors.primary};  
-    transform: scaleX(0); 
-    transform-origin: bottom right;
-    transition: transform 0.2s ease;  
-  }
-
-  &:hover::after,
-  &:focus::after {
-    transform: scaleX(1);  /* Expande a linha para a largura total quando em hover ou focus */
-    transform-origin: bottom left;  /* Garante que a animação cresça da esquerda */
-  }
-`;
-
 const Section = styled.section`
   margin-bottom: 2rem;
-`;
-
-const Subtitle = styled.h2`
-  color: #444;
-  font-size: 1.8rem;
-  margin-top: 0;
-  margin-bottom: 1rem;
-`;
-
-const Image = styled.img`
-  max-width: 100%;
-  height: auto;
-  margin: 1.5rem 0;
 `;
 
 const FlexContainer = styled.div`

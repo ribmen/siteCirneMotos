@@ -1,26 +1,26 @@
 .title {
   color: white;
   font-size: 3.3rem;
-  width: 25rem; /* Largura fixa */
-  margin: 0;  /* Remove margens externas */
-  text-align: left; /* Alinha o texto à esquerda */
+  width: 25rem;
+  margin: 0;
+  text-align: left;
 }
 
 .supportingText {
-  color: #e0e0e0;  /* Cor mais suave que o branco puro */
-  font-size: 1.3rem;  /* Aumenta um pouco o tamanho da fonte para melhor legibilidade */
-  line-height: 1.6;  /* Aumenta o espaçamento entre as linhas */
-  width: 40rem;  /* Largura fixa */
-  margin-top: 1rem;  /* Espaçamento superior entre o título e o texto */
-  text-align: left; /* Alinha o texto à esquerda */
+  color: #e0e0e0;
+  font-size: 1.3rem; 
+  line-height: 1.6; 
+  width: 40rem;
+  margin-top: 1rem; 
+  text-align: left; 
 }
 
 .cirneHighlight {
   color: #c30000  ;
   font-size: 3.3rem;
-  width: 30rem; /* Largura fixa */
-  margin: 0;  /* Remove margens externas */
-  text-align: left; /* Alinha o texto à esquerda */
+  width: 30rem; 
+  margin: 0;  
+  text-align: left; 
 }
 
 .instructionHighlight {
