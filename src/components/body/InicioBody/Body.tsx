@@ -102,8 +102,8 @@ const ImageColumn = styled.div`
 
 const MainWrapper = styled.div`
   position: relative; 
-  width: '100%'; 
-  height: 'auto';
+  width: 100%; 
+  height: auto;
 
   @media screen and (max-width: 896px) {
     width: 693px;
@@ -144,10 +144,10 @@ export const Body: React.FC = () => {
           </p>
         </div>
       </div>
-      <div style={{position: 'relative', height: '19rem', margin: '3rem 3rem 3rem 0', borderBottom: '1px solid #acacac' }} />
+      
       <BodyWrapper>
         {/* Primeira ContentArea com animação de aparecer com deslize */}
-        <ContentArea>
+        <ContentArea >
           <FlexContainer>
             <ImageColumn>
               <img src={salesman} alt="Vendedor" />

@@ -44,12 +44,17 @@
 
 
 .instructionHighlight {
-    line-height: 1.6;
-    font-size: 1.2rem;
-    font-weight: 600;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 @media screen and (max-width: 1200px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
   .bannerContent {
     position: absolute;
     left: 5%;

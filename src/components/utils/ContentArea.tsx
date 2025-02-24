@@ -1,9 +1,10 @@
 // ContentArea.tsx
 import React, { useEffect, useState, useRef } from 'react';
-import styled from 'styled-components';
+import styled, { CSSProperties } from 'styled-components';
 
 interface ContentAreaProps {
   children: React.ReactNode;
+  style?: CSSProperties;
   
 }
 
@@ -18,18 +19,20 @@ const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
   transform: translateY(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 
-  @media screen and (max-width: 932px) {
-    width: 50%;
-  }
-
+  
   /* Animação quando o componente estiver visível */
   ${({ isvisible }) => isvisible && `
     opacity: 1;
     transform: translateY(0);
-  `}
+    `}
+
+    @media screen and (max-width: 932px) {
+      margin-top: 25rem;
+      width: 50%;
+    }
 `;
 
-const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
+const ContentArea: React.FC<ContentAreaProps> = ({ children, style }) => {
   const [isvisible, setisvisible] = useState(false);
   const contentRef = useRef<HTMLDivElement | null>(null);
 
@@ -55,7 +58,7 @@ const ContentArea: React.FC<ContentAreaProps> = ({ children }) => {
   }, []);
 
   return (
-    <ContentAreaWrapper ref={contentRef} isvisible={isvisible}>
+    <ContentAreaWrapper ref={contentRef} isvisible={isvisible} style={style}>
       {children}
     </ContentAreaWrapper>
   );
