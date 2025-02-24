@@ -6,6 +6,21 @@
   text-align: left;
 }
 
+.cirneHighlight {
+  display: block;
+  color: #c30000  ;
+  font-size: 3.3rem;
+  width: 30rem; 
+  margin: 0;  
+  text-align: left; 
+}
+
+.title, .cirneHighlight {
+  @media screen and (max-width: 932px) {
+    font-size: 2.2rem;
+  }
+}
+
 .supportingText {
   color: #e0e0e0;
   font-size: 1.3rem; 
@@ -14,18 +29,19 @@
   margin-top: 1rem; 
   text-align: left;
   
-  @media screen and (max-width: 896px) {
+  @media screen and (max-width: 932px) {
     width: 70%;
   }
 }
 
-.cirneHighlight {
-  color: #c30000  ;
-  font-size: 3.3rem;
-  width: 30rem; 
-  margin: 0;  
-  text-align: left; 
-}
+.bannerContent {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90vw;
+  color: white; 
+  }
+
 
 .instructionHighlight {
     line-height: 1.6;
@@ -33,3 +49,27 @@
     font-weight: 600;
 }
 
+@media screen and (max-width: 1200px) {
+  .bannerContent {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    margin-top: -2vh
+  }
+
+  .supportingTextContainer {
+    position: relative;
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .supportingText {
+    width: 55%;
+    margin: 3rem 0 0 0;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333333;
+  }
+
+}

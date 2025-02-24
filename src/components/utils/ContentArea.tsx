@@ -18,6 +18,10 @@ const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
   transform: translateY(-20px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 
+  @media screen and (max-width: 932px) {
+    width: 50%;
+  }
+
   /* Animação quando o componente estiver visível */
   ${({ isvisible }) => isvisible && `
     opacity: 1;

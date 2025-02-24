@@ -68,14 +68,18 @@ const TextColumn = styled.div`
 
   @media screen and (max-width: 1024px) {
     p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
     }
   }
 
   @media screen and (max-width: 768px){
     p {
-      font-size: 1rem;
-      text-align: center;
+      font-size: 1.2rem;
+      text-align: left;
+    }
+    span {
+      font-size: 1.2rem;
+      text-align: left;
     }
   }
 `;
@@ -111,6 +115,12 @@ const MainBanner = styled.img`
   width: 100%;
   height: auto;
   position: relative;
+
+  @media screen and (max-width: 1200px) {
+    object-fit: cover;
+    width: 100vw;
+    height: 25vh;
+  }
 `
 
 export const Body: React.FC = () => {
@@ -122,25 +132,19 @@ export const Body: React.FC = () => {
 
   return (
     <MainWrapper>
-
       <MainBanner src={banner} alt="Banner Cirne Motos"/>
       {/* Container para o título e o texto */}
-      <div
-        style={{
-          position: 'absolute',
-          top: '5%',
-          left: '5%',
-          width: '40rem',
-          color: 'white',
-        }}
-      >
+      <div className="bannerContent">
         <h1 className="title">
           Manual Online  <span className="cirneHighlight">Cirne Motos</span>
         </h1>
-        <p className="supportingText">
-        Bem-vindo(a) ao Manual de Auxílio e Melhoria Contínua da Cirne Motos Honda. Este material foi criado para ser uma ferramenta prática e acessível, ajudando a organizar e melhorar os processos internos da empresa. Nosso objetivo é facilitar o dia a dia da equipe, alinhando as operações com padrões de eficiência e qualidade, sempre buscando evoluir.
-        </p>
+        <div className="supportingTextContainer">
+          <p className="supportingText">
+          Bem-vindo(a) ao <strong>Manual de Auxílio e Melhoria Contínua da Cirne Motos Honda</strong>. Este material foi criado para ser uma ferramenta prática e acessível, ajudando a organizar e melhorar os processos internos da empresa. Nosso objetivo é facilitar o dia a dia da equipe, alinhando as operações com padrões de eficiência e qualidade, sempre buscando evoluir.
+          </p>
+        </div>
       </div>
+      <div style={{position: 'relative', height: '19rem', margin: '3rem 3rem 3rem 0', borderBottom: '1px solid #acacac' }} />
       <BodyWrapper>
         {/* Primeira ContentArea com animação de aparecer com deslize */}
         <ContentArea>

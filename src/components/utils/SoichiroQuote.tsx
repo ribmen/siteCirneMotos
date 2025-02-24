@@ -8,7 +8,7 @@ const QuoteWrapper = styled.blockquote`
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(135deg, #f7f7f7, #e6e6e6);
-  padding: 0rem 0rem 0rem 1.5rem;
+  padding: 0rem 1rem 1rem 1.5rem;
   border-left: 5px solid #cc0000;
   border-radius: 2px;
   font-family: "Georgia", serif;
@@ -17,7 +17,7 @@ const QuoteWrapper = styled.blockquote`
   margin: 2rem auto;
   gap: 1.5rem;
 
-  @media (max-width: 700px) {
+  @media (max-width: 932px) {
     flex-direction: column;
     text-align: center;
     gap: 0rem;
@@ -37,10 +37,19 @@ const QuoteText = styled.div`
 
   cite {
     font-size: 1rem;
+    text-align: left;
     font-weight: bold;
     color: #cc0000;
     display: block;
     margin-top: 1rem;
+  }
+
+  @media screen and (max-width: 932px) {
+    p {
+      font-size: 1.1rem;
+      text-align: left;
+    }
+    
   }
 `;
 
@@ -52,16 +61,18 @@ const QuoteImage = styled.img`
   border-radius: 0 2px 2px 0px;
   object-fit: cover;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 1.5rem;
 
-  @media (max-width: 200px) {
-    max-width: 100px;
-    height: 100px;
+  @media screen and (max-width: 932px) {
+    max-width: 90%;
+    height: 90%;
   }
 `;
 
 export const SoichiroQuote: React.FC = () => {
   return (
     <QuoteWrapper>
+      <QuoteImage src={soichiro} alt="Foto de Soichiro Honda" />
       <QuoteText>
         <p>
           “O que aprendemos com o fracasso torna-se uma parte preciosa de nós,
@@ -70,7 +81,6 @@ export const SoichiroQuote: React.FC = () => {
         </p>
         <cite>Soichiro Honda</cite>
       </QuoteText>
-      <QuoteImage src={soichiro} alt="Foto de Soichiro Honda" />
     </QuoteWrapper>
   );
 };
