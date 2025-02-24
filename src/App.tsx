@@ -10,10 +10,15 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import ScrollToTop from './components/utils/ScrollToTop';
+import styled from 'styled-components';
 
 library.add(fas, far, fab);
 
-
+const AppContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+`
 
 
 const App: React.FC = () => {
@@ -21,12 +26,14 @@ const App: React.FC = () => {
     <>
     <Router>
       <ScrollToTop/>
-      <Layout>
-        <GlobalStyles />
-        <Header />
-        <AppRoutes />
-        <Footer />
-      </Layout>
+      <AppContainer>
+        <Layout>
+          <GlobalStyles />
+          <Header />
+          <AppRoutes />
+          <Footer />
+        </Layout>
+      </AppContainer>
     </Router>
     </>
   );

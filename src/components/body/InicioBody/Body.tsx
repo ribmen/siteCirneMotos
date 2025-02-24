@@ -9,6 +9,7 @@ const BodyWrapper = styled.main`
   max-width: 1100px;
   margin: 1rem auto; /* Centraliza horizontalmente */
   padding: 0;
+  flex: 1;
 
   @media screen and (max-width: 1024px) { // tablets
     max-width: 90%; 
@@ -96,7 +97,7 @@ const ImageColumn = styled.div`
 `;
 
 const MainWrapper = styled.div`
-  position: absolute; 
+  position: relative; 
   width: '100%'; 
   height: 'auto';
 
@@ -104,6 +105,12 @@ const MainWrapper = styled.div`
     width: 693px;
     height: auto;
   }
+`
+
+const MainBanner = styled.img`
+  width: 100%;
+  height: auto;
+  position: relative;
 `
 
 export const Body: React.FC = () => {
@@ -116,15 +123,7 @@ export const Body: React.FC = () => {
   return (
     <MainWrapper>
 
-      <img
-        src={banner}
-        alt="Banner Cirne Motos"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
-      />
+      <MainBanner src={banner} alt="Banner Cirne Motos"/>
       {/* Container para o título e o texto */}
       <div
         style={{
