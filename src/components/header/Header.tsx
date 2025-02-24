@@ -78,7 +78,7 @@ const Nav = styled.nav`
   margin-left: auto;
 `;
 
-const NavLink = styled(Link)`
+const StyledLink = styled(Link)`
   color: ${({ theme }) => theme.colors.neutral.dark};
   position: relative; 
   text-decoration: none; 
@@ -183,10 +183,10 @@ const Header: React.FC = () => {
 
       <LowerHeader>
         <Nav>
-          <NavLink to="/">Início</NavLink>
-          <NavLink to="/sobre">Sobre a Empresa</NavLink>
-          <NavLink to="/conceitos">Conceitos Fundamentais</NavLink>
-          <NavLink to="/organogramaDCO">Organograma e DCO</NavLink>
+          <StyledLink to="/">Início</StyledLink>
+          <StyledLink to="/sobre">Sobre a Empresa</StyledLink>
+          <StyledLink to="/conceitos">Conceitos Fundamentais</StyledLink>
+          <StyledLink to="/organogramaDCO">Organograma e DCO</StyledLink>
           <DropdownWrapper>
             <DropdownButton onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
               Mais <DropdownIcon isopen={isDropdownOpen}>▼</DropdownIcon>

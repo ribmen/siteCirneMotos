@@ -18,6 +18,7 @@ library.add(fas, far, fab);
 
 const App: React.FC = () => {
   return (
+    <>
     <Router>
       <ScrollToTop/>
       <Layout>
@@ -27,6 +28,7 @@ const App: React.FC = () => {
         <Footer />
       </Layout>
     </Router>
+    </>
   );
 };
 
