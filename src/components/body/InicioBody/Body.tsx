@@ -9,6 +9,15 @@ const BodyWrapper = styled.main`
   max-width: 1100px;
   margin: 1rem auto; /* Centraliza horizontalmente */
   padding: 0;
+
+  @media screen and (max-width: 1024px) { // tablets
+    max-width: 90%; 
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
 `;
 
 const Button = styled.button`
@@ -26,13 +35,23 @@ const Button = styled.button`
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.neutral.light};
   }
+
+  @media screen and (max-width: 758px) {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
 `;
 
 const FlexContainer = styled.div`
   display: flex;
   gap: 2rem; 
   align-items: center; 
-  @media (max-width: 768px) {
+
+  @media screen and (max-width: 1024px) {
+    gap: 1.5rem;
+  }
+
+  @media screen and (max-width: 768px) {
     flex-direction: column; 
     gap: 1rem; 
   }
@@ -45,6 +64,19 @@ const TextColumn = styled.div`
     font-size: 1.2rem;
     color: ${({ theme }) => theme.colors.neutral.dark};
   }
+
+  @media screen and (max-width: 1024px) {
+    p {
+      font-size: 1.1rem;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
 `;
 
 const ImageColumn = styled.div`
@@ -53,7 +85,26 @@ const ImageColumn = styled.div`
     max-width: 100%;
     height: auto;
   }
+
+  @media screen and (max-width: 768px) {
+    img {
+      max-width: 80%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
 `;
+
+const MainWrapper = styled.div`
+  position: absolute; 
+  width: '100%'; 
+  height: 'auto';
+
+  @media screen and (max-width: 896px) {
+    width: 693px;
+    height: auto;
+  }
+`
 
 export const Body: React.FC = () => {
 
@@ -63,7 +114,8 @@ export const Body: React.FC = () => {
 
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
+    <MainWrapper>
+
       <img
         src={banner}
         alt="Banner Cirne Motos"
@@ -117,6 +169,6 @@ export const Body: React.FC = () => {
          
 
       </BodyWrapper>
-    </div>
+    </MainWrapper>
   );
 };

@@ -12,7 +12,11 @@
   line-height: 1.6; 
   width: 40rem;
   margin-top: 1rem; 
-  text-align: left; 
+  text-align: left;
+  
+  @media screen and (max-width: 896px) {
+    width: 70%;
+  }
 }
 
 .cirneHighlight {

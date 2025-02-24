@@ -10,6 +10,10 @@ import whatsappIcon from "../../assets/icons/whatsapp-icon.png";
 
 const HeaderWrapper = styled.header`
   width: 100%;
+
+  @media screen and (max-width: 896px) {
+    width: 100%;
+  }
 `;
 
 const UpperHeader = styled.div`
@@ -19,6 +23,12 @@ const UpperHeader = styled.div`
   padding: 0.5rem 2rem;
   background-color: ${({ theme }) => theme.colors.neutral.light};
   border-bottom: 1px solid #d3d3d3;
+
+  @media screen and (max-width: 932px){
+    padding: 0.6rem 0.5rem;
+    display: grid;
+    gap: 0.5rem;
+  }
 `;
 
 const LowerHeader = styled.div`
@@ -29,16 +39,30 @@ const LowerHeader = styled.div`
   background-color: ${({ theme }) => theme.colors.neutral.light};
   color: ${({ theme }) => theme.colors.neutral.light};
   border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+
+  @media screen and (max-width: 932px) {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
 `;
 
 const Logo = styled.img`
   height: 70px;
+
+  @media screen and (max-width: 896px) {
+    height: 50px;
+  }
 `;
 
 const InfoGroup = styled.div`
   display: flex;
   align-items: center;
   gap: 1rem;
+
+  @media screen and (max-width: 932px){
+    
+  }
 `;
 
 const InfoSpan = styled.span`
@@ -70,12 +94,28 @@ const Button = styled.a`
     width: 20px;
     height: 20px;
   }
+
+  @media screen and (max-width: 932px){
+    img {
+    width: 15px;
+    height: 15px;
+    }
+
+    font-size: 0.8rem;
+    padding: 0.5rem .6rem;
+    gap: 0.3rem;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
   gap: 1.5rem;
   margin-left: auto;
+
+  @media screen and (max-width: 932px) {
+    gap: 1rem;
+    
+  }
 `;
 
 const StyledLink = styled(Link)`
@@ -106,10 +146,15 @@ const StyledLink = styled(Link)`
     transform: scaleX(1);  /* Expande a linha para a largura total quando em hover ou focus */
     transform-origin: bottom left;  /* Garante que a animação cresça da esquerda */
   }
+
+  @media screen and (max-width: 932px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const DropdownWrapper = styled.div`
   position: relative;
+
 `;
 
 const DropdownButton = styled.button`
@@ -124,6 +169,11 @@ const DropdownButton = styled.button`
 
   &:hover {
     color: ${({ theme }) => theme.colors.primary};
+  }
+
+  @media screen and (max-width: 932px) {
+    font-size: 0.8rem;
+    gap: .2rem
   }
 `;
 
@@ -147,13 +197,18 @@ const DropdownContent = styled.div<{ isopen: boolean }>`
 
 const DropdownItem = styled(Link)`
   display: block;
-  padding: 0.5rem 1rem;
+  
   text-decoration: none;
   color: ${({ theme }) => theme.colors.neutral.dark};
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.primary};
     color: ${({ theme }) => theme.colors.neutral.light};
+  }
+
+  @media screen and (max-width: 932px) {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.7rem;
   }
 `;
 
