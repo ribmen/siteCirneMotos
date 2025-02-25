@@ -135,6 +135,13 @@ export const Pops: React.FC = () => {
             </ul>
 
             <h3>ADMINISTRATIVO HSF</h3>
+            <ul>
+              <li><p>LINK CONSÓRCIO CONTEMPLAÇÃO:<a href="https://drive.google.com/file/d/1luo1Qrdz6qszA5_Aep-hksH6Wlz8zche/view?usp=sharing" target="_blank"><u> https://drive.google.com/file/d/1luo1Qrdz6qszA5_Aep-hksH6Wlz8zche/view?usp=sharing</u></a></p></li>
+              <li><p>LINK TRANSFERÊNCIA SEM BEM:<a href="https://drive.google.com/file/d/1xviMfxkfHJIvivhGygR4D-nbc8GMwMoG/view?usp=sharing" target="_blank"><u> https://drive.google.com/file/d/1xviMfxkfHJIvivhGygR4D-nbc8GMwMoG/view?usp=sharing</u></a></p></li>
+              <li><p>LINK TRANSFERÊNCIA COM O BEM:<a href="https://drive.google.com/file/d/1WldOT606XAdMbGDAa0l1wm21hB-UfXcK/view?usp=sharing" target="_blank"><u> https://drive.google.com/file/d/1WldOT606XAdMbGDAa0l1wm21hB-UfXcK/view?usp=sharing</u></a></p></li>
+              <li><p>LINK NUMERÁRIO:<a href="https://drive.google.com/file/d/1ysyTXEhgsGmOnx5xvf2UyIzP-zeDMjyz/view?usp=sharing" target="_blank"><u> https://drive.google.com/file/d/1ysyTXEhgsGmOnx5xvf2UyIzP-zeDMjyz/view?usp=sharing</u></a></p></li>
+              
+            </ul>
 
           </TextContent>
         </Section>
