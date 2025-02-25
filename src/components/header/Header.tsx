@@ -193,11 +193,13 @@ const DropdownContent = styled.div<{ isopen: boolean }>`
   border: 1px solid ${({ theme }) => theme.colors.primary};
   border-radius: 4px;
   z-index: 1000;
+  
 `;
 
 const DropdownItem = styled(Link)`
   display: block;
-  
+  margin: 0;
+  padding: 0.8rem;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.neutral.dark};
 

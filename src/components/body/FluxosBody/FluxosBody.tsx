@@ -151,14 +151,22 @@ export const FluxosBody: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-  const [popupImageId, setPopupImageId] = useState<number | null>(null);
+  const [popupImageIdAux, setPopupImageIdAux] = useState<number | null>(null);
+  const [popupImageIdVendedor, setPopupImageIdVendedor] = useState<number | null>(null);
 
-  const handleOpenPopup = (id: number) => {
-    setPopupImageId(id);
+  const handleOpenPopupAux = (id: number) => {
+    setPopupImageIdAux(id);
+  };
+  const handleOpenPopupVendedor = (id: number) => {
+    setPopupImageIdVendedor(id);
   };
 
-  const handleClosePopup = () => {
-    setPopupImageId(null);
+  const handleClosePopupAux = () => {
+    setPopupImageIdAux(null);
+  };
+
+  const handleClosePopupVendedor = () => {
+    setPopupImageIdVendedor(null);
   };
 
   return (
@@ -189,17 +197,17 @@ export const FluxosBody: React.FC = () => {
             <h1 className='sumarioTitle'>Sumário</h1>
             <h3 style={{marginBottom: 0}}>Auxiliar de vendas</h3>
             <SumarioTopics>
-              <li><a href="#section1">Processo de Faturamento</a></li>
-              <li><a href="#section2">Entrega da moto</a></li>
-              <li><a href="#section3">Emplacamento</a></li>
+              <li><a>Processo de Faturamento</a></li>
+              <li><a>Entrega da moto</a></li>
+              <li><a>Emplacamento</a></li>
             </SumarioTopics>
 
             <h3 style={{marginBottom: 0}}>Vendedor</h3>
             <SumarioTopics>
-              <li><a href="#section4">Processo de vendas</a></li>
-              <li><a href="#section5">Apresentação da moto</a></li>
-              <li><a href="#section5">Processo de perseguição do cliente</a></li>
-              <li><a href="#section5">Processo de motos e usado (seminovos)</a></li>
+              <li><a>Processo de vendas</a></li>
+              <li><a>Apresentação da moto</a></li>
+              <li><a>Processo de perseguição do cliente</a></li>
+              <li><a>Processo de motos e usado (seminovos)</a></li>
             </SumarioTopics>
           </nav>
         </ContentArea2>
@@ -212,16 +220,16 @@ export const FluxosBody: React.FC = () => {
                 <h1>{dataAux.title}</h1>
                 <ImageWrapper key={dataAux.id}>
                   <img style={{maxWidth: '100%', height: 'auto'}} src={dataAux.src} alt={dataAux.alt} />
-                  <PopupOverlay show={popupImageId === dataAux.id}>
-                    <PopupImage src={dataAux.src} alt={dataAux.alt} />
-                    <CloseButton onClick={handleClosePopup}>X</CloseButton>
-                  </PopupOverlay>
                   <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
                     <div style={{marginTop: '1.2rem'}}>
-                    <ExpandButton onClick={() => handleOpenPopup(dataAux.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                    <ExpandButton onClick={() => handleOpenPopupAux(dataAux.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
                     </div>
                     <Dropdown data={dataAux.text} />
                   </div>
+                  <PopupOverlay show={popupImageIdAux === dataAux.id}>
+                    <PopupImage src={dataAux.src} alt={dataAux.alt} />
+                    <CloseButton onClick={handleClosePopupAux}>X</CloseButton>
+                  </PopupOverlay>
                 </ImageWrapper>    
               </>
             ),
@@ -234,13 +242,14 @@ export const FluxosBody: React.FC = () => {
                   <h1>{dataVendedor.title}</h1>
                 <ImageWrapper key={dataVendedor.id}>
                   <img style={{maxWidth: '100%', height: 'auto'}} src={dataVendedor.src} alt={dataVendedor.alt} />
-                  <PopupOverlay show={popupImageId === dataVendedor.id}>
+                  
+                  <PopupOverlay show={popupImageIdVendedor === dataVendedor.id}>
                     <PopupImage src={dataVendedor.src} alt={dataVendedor.alt} />
-                    <CloseButton onClick={handleClosePopup}>X</CloseButton>
+                    <CloseButton onClick={handleClosePopupVendedor}>X</CloseButton>
                   </PopupOverlay>
                   <div style={{marginTop: '2rem', width: "1000px", display: 'flex'}}>
                     <div style={{marginTop: '1.2rem'}}>
-                    <ExpandButton onClick={() => handleOpenPopup(dataVendedor.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
+                    <ExpandButton onClick={() => handleOpenPopupVendedor(dataVendedor.id)}><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="-32 0 512 512"><path fill="currentColor" d="M32 32C14.3 32 0 46.3 0 64v96c0 17.7 14.3 32 32 32s32-14.3 32-32V96h64c17.7 0 32-14.3 32-32s-14.3-32-32-32zm32 320c0-17.7-14.3-32-32-32S0 334.3 0 352v96c0 17.7 14.3 32 32 32h96c17.7 0 32-14.3 32-32s-14.3-32-32-32H64zM320 32c-17.7 0-32 14.3-32 32s14.3 32 32 32h64v64c0 17.7 14.3 32 32 32s32-14.3 32-32V64c0-17.7-14.3-32-32-32zm128 320c0-17.7-14.3-32-32-32s-32 14.3-32 32v64h-64c-17.7 0-32 14.3-32 32s14.3 32 32 32h96c17.7 0 32-14.3 32-32z"/></svg></ExpandButton>
                     </div>
                     <Dropdown data={dataVendedor.text} />
                   </div>

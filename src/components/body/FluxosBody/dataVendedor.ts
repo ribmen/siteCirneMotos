@@ -5,7 +5,7 @@ import perseguicao from '../../../assets/fluxogramas/Fluxo-Comercial-Perseguiç�
 
 export const dataVendedor = [
   { 
-    id: 1,
+    id: 4,
     title: 'Processo de venda',
     src: venda,
     alt: 'Processo de venda',
@@ -57,7 +57,7 @@ export const dataVendedor = [
     textStyle: {textAlign: 'center'},
   },
   { 
-    id: 2,
+    id: 5,
     title: 'Processo de apresentação da moto',
     src: apresentacao,
     alt: 'Processo de apresentação da moto',
@@ -110,7 +110,7 @@ export const dataVendedor = [
     textStyle: {textAlign: 'center'},
   },
   { 
-    id: 3,
+    id: 6,
     title: 'Perseguição',
     src: perseguicao,
     alt: 'Perseguição',
@@ -139,7 +139,7 @@ export const dataVendedor = [
     textStyle: {textAlign: 'center'},
   },
   { 
-    id: 4,
+    id: 7,
     title: 'Venda de seminovos',
     src: emplacamento2,
     alt: 'Venda de seminivos',
