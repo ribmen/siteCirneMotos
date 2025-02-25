@@ -4,8 +4,8 @@ import banner from '../../../assets/banners/organograma.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
 import gerente from '../../../assets/gerente-produto.jpg';
 import "../InicioBody/body.css";
-import { Button } from '../ConceitosBody/ConceitosBody';
-import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+import { Banner, Button } from '../ConceitosBody/ConceitosBody';
+import { Title, SectionTitle } from '../SobreEmpresaBody/AboutBody2';
 import { CloseButton, ExpandButton, ImageWrapper, PopupImage, PopupOverlay } from '../FluxosBody/FluxosBody';
 import geral from '../../../assets/organograma-dco/Organograma-Honda.jpg'
 import {data} from './data';
@@ -17,13 +17,6 @@ const BodyWrapper = styled.main`
   padding: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.8;
-`;
-
-const Title = styled.h1`
-  color: #cc0000;
-  font-size: 2.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
 `;
 
 const Section = styled.section`
@@ -56,12 +49,6 @@ const TextContent = styled.div`
     font-size: 1.2rem;
     line-height: 1.8;
   }
-`;
-
-const Banner = styled.img`
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
 `;
 
 export const OrganogramaDCO: React.FC = () => {
@@ -155,4 +142,6 @@ export const OrganogramaDCO: React.FC = () => {
     </div>
   );
 };
+
+export { Banner };
 

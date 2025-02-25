@@ -1,0 +1,21 @@
+.mobileWidth {
+  width: 100%; /* Garante que o contêiner ocupe 100% da largura */
+}
+
+.mobileWidth a {
+  word-break: break-all; /* Quebra os links em várias linhas */
+  overflow-wrap: break-word; /* Alternativa ao word-break */
+  color: blue; /* Mantém a cor do link */
+  text-decoration: underline; /* Mantém o sublinhado */
+}
+
+@media screen and (max-width: 1200px) {
+  .mobileWidth {
+    width: 100%; /* Ajusta a largura para telas menores */
+  }
+
+  .mobileWidth a {
+    word-break: break-all; /* Garante que os links quebrem */
+    overflow-wrap: break-word; /* Alternativa ao word-break */
+  }
+}

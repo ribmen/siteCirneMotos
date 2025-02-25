@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import ContentArea2 from '../../utils/ContentArea2';
 import handshake from '../../../assets/handshake.jpg';
 import motivacional from '../../../assets/videos/the-real-slim-video.mp4';
+import { SectionTitle } from '../SobreEmpresaBody/AboutBody2';
 
 const AboutWrapper = styled.div`
   max-width: 1100px;
@@ -10,14 +11,6 @@ const AboutWrapper = styled.div`
   padding: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.8;
-`;
-
-const SectionTitle = styled.h2`
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-  color: #cc0000;
-  border-left: 5px solid #cc0000; //#FF0000
-  padding-left: 1rem;
 `;
 
 const TextContent = styled.p`

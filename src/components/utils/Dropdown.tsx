@@ -34,6 +34,11 @@ const TextContent = styled.div<{ visible: boolean }>`
   border: ${(props) => (props.visible ? "1px solid #ddd" : "none")};
   border-radius: ${(props) => (props.visible ? "5px" : "0")};
   background-color: ${(props) => (props.visible ? "#f9f9f9" : "transparent")};
+
+  @media screen and (max-width: 1200px) {
+    margin-left: -5%;
+    width: 35%;
+  }
 `;
 
 export const Dropdown: React.FC<DropdownProps> = ({ data }) => {

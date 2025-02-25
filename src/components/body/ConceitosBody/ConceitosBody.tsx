@@ -7,7 +7,7 @@ import banner from '../../../assets/honda-legacy2.jpg';
 import salesman from '../../../assets/salesman.jpg';
 import missaoValores from '../../../assets/missaovalores2.jpg';
 import mulher from '../../../assets/mulher-honda.jpg';
-import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+import { SectionTitle, Title } from '../SobreEmpresaBody/AboutBody2';
 
 
 const BodyWrapper = styled.main`
@@ -18,13 +18,6 @@ const BodyWrapper = styled.main`
   line-height: 1.8;
 `;
 
-const Title = styled.h1`
-  color: #cc0000;
-  font-size: 2.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
-`;
-
 const Section = styled.section`
   margin-bottom: 2rem;
 `;
@@ -33,6 +26,13 @@ const Image = styled.img`
   max-width: 100%;
   height: auto;
   margin: 1.5rem 0;
+  width: 60%;  
+  margin-left: 12rem;
+
+  @media screen and (max-width:1200px) {
+    margin-left: 0;
+    width:100%
+  }
 `;
 
 const FlexContainer = styled.div`
@@ -63,10 +63,16 @@ const TextContent = styled.div`
   }
 `;
 
-const Banner = styled.img`
+export const Banner = styled.img`
   width: 100%;
   height: auto;
   margin-bottom: 2rem;
+
+  @media screen and (max-width: 1200px) {
+    object-fit: cover;
+    width: 100%;
+    height: 25vh;
+  }
 `;
 
 export const Button = styled.button`
@@ -96,11 +102,11 @@ const ConceitosBody: React.FC = () => {
       <Banner src={banner} alt="Banner Conceitos Fundamentais" />
       <BodyWrapper>
         <ContentArea2>
-
+        
         <Title>Conceitos Fundamentais Cirne Motos Honda</Title>
 
         <Section>
-          <Image style={{width: '60%', height: 'auto', marginLeft: '12rem'}} src={missaoValores} alt="Missão e Valores da Cirne Motos Honda" />
+          <Image src={missaoValores} alt="Missão e Valores da Cirne Motos Honda" />
           <p>
             Para garantir o <strong>sucesso contínuo</strong> e a <strong>excelência</strong> no atendimento ao cliente, 
             a Cirne Motos Honda adota conceitos fundamentais que guiam nossas práticas diárias e orientam o desempenho da equipe. Estes princípios são essenciais para a busca incessante pela qualidade e a satisfação do cliente, fundamentais para o crescimento da empresa.

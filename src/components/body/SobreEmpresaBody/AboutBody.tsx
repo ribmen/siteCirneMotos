@@ -12,6 +12,10 @@ const AboutWrapper = styled.div`
   padding: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.8;
+
+  @media screen and (max-width: 1200px) {
+    max-width: 10px;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -59,6 +63,47 @@ const ValuesList = styled.ul`
   }
 `;
 
+const AboutBanner = styled.img `
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  @media screen and (max-width: 1200px) {
+    object-fit: cover;
+    width: 100%;
+    height: 25vh;
+  }
+`
+
+const MotoWrapper = styled.div`
+  display: flex; 
+  justify-content: center; 
+  align-items: flex-end;
+`
+
+const Moto = styled.img`
+  width: 300px; 
+  height: auto; 
+  margin-right: 1rem;
+
+  @media screen and (max-width: 1200px){
+    width: 150px;
+    height: auto;
+  }
+`
+
+const CBR1000 = styled.img`
+  width: 320px; 
+  height: 200px;
+  bottom: 0;
+  margin-left: 1rem;
+
+  @media screen and (max-width: 1200px){
+    width: 160px;
+    height: 100px;
+  }
+`
+
 const AboutBody: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -66,15 +111,7 @@ const AboutBody: React.FC = () => {
   return (
     <>
     {/* Banner */}
-    <img
-        src={bannerCirne}
-        alt="Banner Cirne Motos"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
-      />
+    <AboutBanner src={bannerCirne} alt="Banner Cirne Motos" />
     
     <AboutWrapper>
       {/* Introdução */}
@@ -122,10 +159,10 @@ const AboutBody: React.FC = () => {
             <span>Reconhecimento e Mérito: Celebramos conquistas e valorizamos resultados.</span>
           </li>
         </ValuesList>
-        <div style={{display: 'flex', justifyContent: 'center', alignItems: 'flex-end'}}>
-          <img src={moto} style={{width: '300px', height: 'auto', marginRight: '1rem'}}></img>
-          <img src={cbr1000} style={{width: '320px', height: '200px', bottom: '0', marginLeft: '1rem'}}></img>
-        </div>
+        <MotoWrapper>
+          <Moto src={moto} />
+          <CBR1000 src={cbr1000} />
+        </MotoWrapper>
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '2rem' }}>
             <Button onClick={scrollToTop}>
               Voltar ao topo

@@ -4,8 +4,9 @@ import banner from '../../../assets/banners/reuniao.jpg'
 import ContentArea2 from '../../utils/ContentArea2';
 import pensamento from '../../../assets/organogramadco.jpg';
 import "../InicioBody/body.css";
-import { Button } from '../ConceitosBody/ConceitosBody';
+import { Banner, Button } from '../ConceitosBody/ConceitosBody';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+import { Title } from '../SobreEmpresaBody/AboutBody2';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -13,13 +14,6 @@ const BodyWrapper = styled.main`
   padding: 0 1rem;
   font-size: 1.2rem;
   line-height: 1.8;
-`;
-
-const Title = styled.h1`
-  color: #cc0000;
-  font-size: 2.5rem;
-  margin-bottom: 0;
-  margin-top: 0;
 `;
 
 const Section = styled.section`
@@ -52,12 +46,6 @@ const TextContent = styled.div`
     font-size: 1.2rem;
     line-height: 1.8;
   }
-`;
-
-const Banner = styled.img`
-  width: 100%;
-  height: auto;
-  margin-bottom: 2rem;
 `;
 
 export const Pops: React.FC = () => {
@@ -98,8 +86,15 @@ export const Pops: React.FC = () => {
               <li style={{textDecoration: 'none'}}><h3>CARGO</h3></li>
             </ul> */}
             <h3>VENDEDOR</h3>
-            <ul>
-              <li><p>LINK VENDA VIA P2E: <a href="https://drive.google.com/file/d/1PeopBtIRhBPhEbTFhcg8gFAuQxLlVxWL/view?usp=sharing" target="_blank"><u>https://drive.google.com/file/d/1PeopBtIRhBPhEbTFhcg8gFAuQxLlVxWL/view?usp=sharing</u></a></p></li>
+            <ul className='mobileWidth'>
+            <li>
+      <p>
+        LINK VENDA VIA P2E:{" "}
+        <a href="https://drive.google.com/file/d/1PeopBtIRhBPhEbTFhcg8gFAuQxLlVxWL/view?usp=sharing" target="_blank">
+          <u>https://drive.google.com/file/d/1PeopBtIRhBPhEbTFhcg8gFAuQxLlVxWL/view?usp=sharing</u>
+        </a>
+      </p>
+    </li>
 
               <li><p>LINK COMPRA SEMINOVOS: <a href="https://drive.google.com/file/d/1_T9LiStRSVYfMSEB7qXcTIRETtavF_p3/view?usp=sharing" target="_blank"><u>https://drive.google.com/file/d/1_T9LiStRSVYfMSEB7qXcTIRETtavF_p3/view?usp=sharing</u></a></p></li>
               

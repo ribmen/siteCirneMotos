@@ -17,3 +17,9 @@
   border: #c3c3c3 solid 1px;
   padding: 1rem;
 }
+
+.mobileMargin {
+  @media screen and (max-width: 1200px) {
+    margin-left: 1rem;
+  }
+}

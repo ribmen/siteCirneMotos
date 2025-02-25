@@ -5,7 +5,6 @@ import ContentArea2 from '../../utils/ContentArea2';
 import moto from '../../../assets/moto-honda.png';
 import cbr1000 from '../../../assets/cbr1000.png';
 import { Button } from '../ConceitosBody/ConceitosBody';
-import { SectionTitle, TextContent } from './AboutBody';
 
 const AboutWrapper = styled.div`
   max-width: 1100px;
@@ -15,10 +14,23 @@ const AboutWrapper = styled.div`
   line-height: 1.8;
 `;
 
-const Title = styled.h1`
+export const TextContent = styled.p`
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  color: ${({ theme }) => theme.colors.neutral.dark}
+`;
+
+export const Title = styled.h1`
   color: #cc0000;
   font-size: 2.5rem;
   margin-bottom: 0;
+
+  @media screen and (max-width: 1200px){
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
 `;
 
 const ValuesList = styled.ul`
@@ -63,6 +75,11 @@ const MotoEsquerda = styled.img<{ visible: boolean }>`
   transform: ${({ visible }) => (visible ? 'translateX(0)' : 'translateX(-100%)')};
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+  @media screen and (max-width: 1200px){
+    width: 150px;
+    height: auto;
+  }
 `;
 
 const MotoDireita = styled.img<{ visible: boolean }>`
@@ -72,6 +89,36 @@ const MotoDireita = styled.img<{ visible: boolean }>`
   transform: ${({ visible }) => (visible ? 'translateX(0)' : 'translateX(100%)')};
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+
+  @media screen and (max-width: 1200px){
+    width: 160px;
+    height: 100px;
+  }
+`;
+
+const AboutBanner = styled.img `
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  @media screen and (max-width: 1200px) {
+    object-fit: cover;
+    width: 100%;
+    height: 25vh;
+  }
+`
+
+export const SectionTitle = styled.h2`
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #cc0000;
+  border-left: 5px solid #cc0000; //#FF0000
+  padding-left: 1rem;
+
+  @media screen and (max-width: 1200px) {
+    font-size: 1.5rem;
+    margin: 0;
+  }
 `;
 
 const AboutBody2: React.FC = () => {
@@ -106,14 +153,9 @@ const AboutBody2: React.FC = () => {
   return (
     <>
       {/* Banner */}
-      <img
+      <AboutBanner
         src={bannerCirne}
         alt="Banner Cirne Motos"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
       />
 
       <AboutWrapper>

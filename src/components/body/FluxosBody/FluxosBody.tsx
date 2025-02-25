@@ -10,6 +10,8 @@ import {dataVendedor} from "./dataVendedor";
 import { Dropdown } from '../../utils/Dropdown';
 import { Button } from '../ConceitosBody/ConceitosBody';
 import { SectionTitle } from '../SobreEmpresaBody/AboutBody';
+import { Banner } from '../OrganogramaDCO/OrganogramaDCO';
+import { Title } from '../SobreEmpresaBody/AboutBody2';
 
 const BodyWrapper = styled.main`
   max-width: 1100px;
@@ -146,13 +148,6 @@ export const ImageWrapper = styled.div`
 
 export const FluxosBody: React.FC = () => {
   
-
-  
-/*   const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const [popupImageId, setPopupImageId] = useState(null);
-  const handleOpenPopup = (images.id) => setPopupImageId(images.id);
-  const handleClosePopup = (images.id) => setPopupImageId(null);
- */
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -168,19 +163,14 @@ export const FluxosBody: React.FC = () => {
 
   return (
     <div style={{ position: 'relative', width: '100%', height: 'auto' }}>
-      <img
+      <Banner
         src={banner}
-        alt="Banner Cirne Motos"
-        style={{
-          width: '100%',
-          height: 'auto',
-          position: 'relative',
-        }}
+        alt="Banner Cirne Motos"        
       />
       <BodyWrapper>
         {/* Primeira ContentArea com texto e imagem lado a lado */}
         <ContentArea2>
-            <h1 className='fluxosTitle'>Fluxogramas de processos </h1>
+            <Title>Fluxogramas de processos </Title>
 
           <FlexContainer>
             <ImageColumn>
@@ -215,8 +205,8 @@ export const FluxosBody: React.FC = () => {
         </ContentArea2>
 
  {/*        <ContentArea2> */}
-          <div>
-          <h1 className='fluxosTitle'>Cargo Auxiliar de vendas </h1>
+          <div className="mobileMargin">
+          <Title>Cargo Auxiliar de vendas </Title>
             {dataAux.map((dataAux) => (
               <>
                 <h1>{dataAux.title}</h1>

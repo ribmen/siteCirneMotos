@@ -44,7 +44,7 @@ const ContentArea: React.FC<ContentAreaProps> = ({ children, style }) => {
       },
       {
         root: null, // Observa a janela do navegador
-        rootMargin: '0px', // Margem ao redor do root
+        rootMargin: '0px',
         threshold: 0.2, // Considera visível quando 10% do elemento estiver na tela
       }
     );

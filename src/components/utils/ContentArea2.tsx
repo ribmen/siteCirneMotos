@@ -22,6 +22,10 @@ const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
     opacity: 1;
     transform: translateY(0);
   `}
+
+  @media screen and (max-width: 932px) {
+    width: 80%;
+  }
 `;
 
 const ContentArea2: React.FC<ContentAreaProps> = ({ children }) => {
