@@ -34,9 +34,9 @@ body {
   position: relative;
   margin: -27rem 0rem 15rem 5rem;
 
-  /* @media screen and (max-width: 932px) {
-    margin: 0rem 0rem 8rem 5%;
-  } */
+  @media screen and (max-width: 1460px) {
+    margin: -22rem 0rem 15rem 5rem;
+  }
 }
 
 .supportingText {
