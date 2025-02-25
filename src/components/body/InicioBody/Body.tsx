@@ -66,16 +66,11 @@ const TextColumn = styled.div`
     color: ${({ theme }) => theme.colors.neutral.dark};
   }
 
-  @media screen and (max-width: 1024px) {
-    p {
-      font-size: 1.2rem;
-    }
-  }
-
   @media screen and (max-width: 768px){
     p {
       font-size: 1.2rem;
       text-align: left;
+      width: 90%;
     }
     span {
       font-size: 1.2rem;
@@ -105,9 +100,7 @@ const MainWrapper = styled.div`
   width: 100%; 
   height: auto;
 
-  @media screen and (max-width: 896px) {
-    width: 693px;
-    height: auto;
+  @media screen and (max-width: 932px) {
   }
 `
 
@@ -118,7 +111,7 @@ const MainBanner = styled.img`
 
   @media screen and (max-width: 1200px) {
     object-fit: cover;
-    width: 100vw;
+    width: 100%;
     height: 25vh;
   }
 `
@@ -138,12 +131,12 @@ export const Body: React.FC = () => {
         <h1 className="title">
           Manual Online  <span className="cirneHighlight">Cirne Motos</span>
         </h1>
+      </div>
         <div className="supportingTextContainer">
           <p className="supportingText">
           Bem-vindo(a) ao <strong>Manual de Auxílio e Melhoria Contínua da Cirne Motos Honda</strong>. Este material foi criado para ser uma ferramenta prática e acessível, ajudando a organizar e melhorar os processos internos da empresa. Nosso objetivo é facilitar o dia a dia da equipe, alinhando as operações com padrões de eficiência e qualidade, sempre buscando evoluir.
           </p>
         </div>
-      </div>
       
       <BodyWrapper>
         {/* Primeira ContentArea com animação de aparecer com deslize */}

@@ -27,8 +27,7 @@ const ContentAreaWrapper = styled.div<{ isvisible: boolean }>`
     `}
 
     @media screen and (max-width: 932px) {
-      margin-top: 25rem;
-      width: 50%;
+      width: 88%;
     }
 `;
 
