@@ -267,10 +267,6 @@ const Header: React.FC = () => {
               <DropdownItem to="/fluxos">Fluxogramas de Processos</DropdownItem>
               <DropdownItem to="/pops">POPs</DropdownItem>
               <DropdownItem to="/creditos">Créditos</DropdownItem>
-              <UserButton>
-              <UserButton.Action label="signOut" />
-
-              </UserButton>
             </DropdownContent>
           </DropdownWrapper>
         </Nav>

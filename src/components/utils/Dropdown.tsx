@@ -51,7 +51,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ data }) => {
   return (
     <Container>
       <Button onClick={toggleVisibility}>
-        {isVisible ? "Ocultar Texto " : "Mostrar descrição das atividades "}
+        {isVisible ? "Ocultar Texto " : "Mostrar descritivo de cargos "}
         {isVisible ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
