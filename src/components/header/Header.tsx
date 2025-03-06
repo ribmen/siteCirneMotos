@@ -6,6 +6,8 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import cirne from "../../assets/logo/logo_cirne-motos.png";
 import logoHonda from "../../assets/logo/logo-honda.jpg";
 import whatsappIcon from "../../assets/icons/whatsapp-icon.png";
+import { SignOutButton, UserButton } from '@clerk/clerk-react';
+
 
 
 const HeaderWrapper = styled.header`
@@ -223,8 +225,21 @@ const Header: React.FC = () => {
         <InfoGroup>
           <Logo src={cirne} alt="Logo Cirne Motos" />
           <Logo src={logoHonda} alt="Logo Honda" />
+          <UserButton.Action label="signOut" />
         </InfoGroup>
         <InfoGroup>
+          <UserButton
+            userProfileMode="modal"
+            appearance={{
+              elements: {
+                userButtonPopoverActionButton__manageAccount: { display: "none" },
+              },
+            }}
+          >
+            <UserButton.MenuItems>
+              <UserButton.Action label="signOut" />
+            </UserButton.MenuItems>
+          </UserButton>
           <InfoSpan>Fale conosco:</InfoSpan>
           <Button style={{color: "#000"}} href="https://wa.me/+5584981883488" target="_blank">
             <img src={whatsappIcon} alt="WhatsApp" />
@@ -252,6 +267,10 @@ const Header: React.FC = () => {
               <DropdownItem to="/fluxos">Fluxogramas de Processos</DropdownItem>
               <DropdownItem to="/pops">POPs</DropdownItem>
               <DropdownItem to="/creditos">Créditos</DropdownItem>
+              <UserButton>
+              <UserButton.Action label="signOut" />
+
+              </UserButton>
             </DropdownContent>
           </DropdownWrapper>
         </Nav>

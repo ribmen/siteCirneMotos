@@ -1,0 +1,100 @@
+body {
+  overflow-x: hidden;
+}
+
+.title {
+  color: white;
+  font-size: 3.3rem;
+  width: 25rem;
+  margin: 0;
+  text-align: left;
+
+  @media screen and (max-width: 932px) {
+    font-size: 2.2rem;
+    width: 100%; 
+  }
+
+}
+
+.cirneHighlight {
+  display: block;
+  color: #c30000;
+  font-size: 3.3rem;
+  width: 30rem; 
+  margin: 0;  
+  text-align: left; 
+
+  @media screen and (max-width: 932px) {
+    font-size: 2.2rem;
+    width: 100%; 
+  }
+}
+
+.supportingTextContainer {
+  position: relative;
+  flex-direction: column;
+  margin: -27rem 0rem 15rem 5rem;
+
+  @media screen and (max-width: 1460px) {
+    margin: -22rem 0rem 15rem 5rem;
+  }
+}
+
+.supportingText {
+  color: #e0e0e0;
+  font-size: 1.3rem; 
+  line-height: 1.6; 
+  width: 40rem;
+  margin-top: 1rem; 
+  text-align: left;
+  
+  @media screen and (max-width: 932px) {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+.bannerContent {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  color: white; 
+
+  @media screen and (max-width: 1200px) {
+    top: 3%;
+  }
+}
+
+
+.instructionHighlight {
+  line-height: 1.6;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 1200px) {
+
+  .bannerContent {
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    text-align: center;
+    margin-top: -2vh
+  }
+
+  .supportingTextContainer {
+    position: relative;
+    display: flex;
+    margin: 1rem 0 0 1rem;
+  }
+
+  .supportingText {
+    width:80%;
+    margin-left: 1rem;
+    text-align: left;
+    font-size: 1.2rem;
+    color: #333333;
+  }
+
+}
