@@ -1,5 +1,5 @@
 import React from 'react';
-import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/clerk-react';
+import { SignedIn, SignedOut } from '@clerk/clerk-react';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 import GlobalStyles from './styles/GlobalStyles';

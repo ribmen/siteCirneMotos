@@ -6,7 +6,7 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons';
 import cirne from "../../assets/logo/logo_cirne-motos.png";
 import logoHonda from "../../assets/logo/logo-honda.jpg";
 import whatsappIcon from "../../assets/icons/whatsapp-icon.png";
-import { SignOutButton, UserButton } from '@clerk/clerk-react';
+import { UserButton } from '@clerk/clerk-react';
 
 
 
