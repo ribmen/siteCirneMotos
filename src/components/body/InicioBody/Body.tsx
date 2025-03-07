@@ -109,11 +109,12 @@ const MainBanner = styled.img`
   height: auto;
   position: relative;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     object-fit: cover;
     width: 100%;
     height: 25vh;
   }
+
 `
 
 export const Body: React.FC = () => {

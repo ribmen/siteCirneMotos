@@ -68,7 +68,7 @@ export const Banner = styled.img`
   height: auto;
   margin-bottom: 2rem;
 
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1000px) {
     object-fit: cover;
     width: 100%;
     height: 25vh;
