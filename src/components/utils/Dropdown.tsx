@@ -3,9 +3,9 @@ import styled from "styled-components";
 
 interface DropdownProps {
   data: string; // Espera uma string com HTML (como data.text)
+  label: string;
 }
 
-// Styled Components
 const Container = styled.div`
   margin: 20px;
 `;
@@ -41,7 +41,7 @@ const TextContent = styled.div<{ visible: boolean }>`
   }
 `;
 
-export const Dropdown: React.FC<DropdownProps> = ({ data }) => {
+export const Dropdown: React.FC<DropdownProps> = ({ data, label }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -51,7 +51,7 @@ export const Dropdown: React.FC<DropdownProps> = ({ data }) => {
   return (
     <Container>
       <Button onClick={toggleVisibility}>
-        {isVisible ? "Ocultar Texto " : "Mostrar descritivo de cargos "}
+        {isVisible ? "Ocultar Texto " : label}
         {isVisible ? (
           <svg
             xmlns="http://www.w3.org/2000/svg"
