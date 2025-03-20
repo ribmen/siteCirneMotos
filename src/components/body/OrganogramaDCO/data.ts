@@ -414,7 +414,7 @@ export const data = [
 </li>
 </ul>
 
-<h2>11. MULTIPLICADOR DE TREINAMENTOS (Presente em COMERCIAL e ADM)</h2>
+<h2>11. MULTIPLICADOR DE TREINAMENTOS (Presente em COMERCIAL e VENDAS EXTERNAS)</h2>
 <h3>Missão do Cargo:
 </h3>
 <p>Planejar, organizar e realizar treinamentos e palestras estratégicas para capacitar e desenvolver colaboradores nas áreas de sistemas, trânsito, consórcio, administração, pós-venda e banco, alinhando as práticas operacionais e comerciais aos objetivos e padrões da Cirne Motos Honda.
@@ -459,7 +459,7 @@ export const data = [
 {
   id: 3,
   src: adm ,
-  title: 'ADMINISTRATIVO',
+  title: 'SETOR DE VENDAS EXTERNAS',
   alt: 'Organograma Administrativo',
   text: `
   <h2>1. Administrativo HSF - CONSÓRCIO
@@ -789,7 +789,7 @@ export const data = [
 <h3>Formação Acadêmica</h3>
 <p>Nível médio completo</p>
 
-<h2>7. MULTIPLICADOR DE TREINAMENTOS (Presente em COMERCIAL e ADM)</h2>
+<h2>7. MULTIPLICADOR DE TREINAMENTOS (Presente em COMERCIAL e VENDAS EXTERNAS)</h2>
 <h3>Missão do Cargo:
 </h3>
 <p>Planejar, organizar e realizar treinamentos e palestras estratégicas para capacitar e desenvolver colaboradores nas áreas de sistemas, trânsito, consórcio, administração, pós-venda e banco, alinhando as práticas operacionais e comerciais aos objetivos e padrões da Cirne Motos Honda.
